@@ -1,0 +1,130 @@
+.company-name{
+  margin-left: 20px;
+}
+.nav{
+  height:70px;
+  border-bottom : 1px solid black;
+  display: flex;
+  align-items: center;
+}
+.nav-right-items{
+  margin-right: 20px;
+  display: flex;
+  margin-left : 0;
+  width: 170px;
+  float: right;
+}
+.nav-item{
+  margin-left: 10px;
+}
+.title{
+  text-align: center;
+  font-size : 60px;
+  font-weight:bold;
+  float: center;
+}
+.subtitle{
+  text-align: left;
+  font-size:20px;
+  font-weight:300;
+}
+.main{
+  width: 800px;
+  margin:0 auto;
+}
+.center{
+  text-align: center;
+}
+
+#out {
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+#in {
+  display: table-cell;
+}
+
+dd{
+  font-weight: bold;
+  margin-top: 10px;
+  color: #2d3436;
+}
+.link{
+  margin-right: 10px;
+}
+.news-top, .alarm-top{
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.news, .alarm{
+  background-color: #f7f9fa;
+  border: 1px solid #dae1e6;
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding-right: 10px;
+}
+
+.list{
+  background-color: #f7f9fa;
+  border: 1px solid #dae1e6;
+  width: 150px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.soamgo_logo{
+  margin-left: 20px;
+  float: left;
+}
+.discord_logo{
+  width: 40px;
+  height: 40px;
+}
+
+.names{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+li{
+  font-weight: bold;
+  color: #2c2926;
+  margin-top: 5px;
+}
+
+.name_list{
+  cursor: pointer;
+}
+
+.one{
+  color: #4285f4;
+}
+.onderbar{
+  color: #ea4335;
+}
+.two{
+  color: #fbbc05;
+}
+.class_{
+  color: #34a853;
+}
+
+.add_news{
+  margin-left: 35px;
+  color: blue;
+  cursor: pointer;
+}
+
+.disappear{
+  display: none;
+}
+
+#add_news_input{
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
