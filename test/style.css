@@ -1,0 +1,84 @@
+.clearfix{display: block; content: ''; clear: both;}
+
+*{margin: 0; padding: 0;}
+
+#main{
+    margin: 0 auto;
+    width: 1200px;
+    height: 700px;
+}
+
+#head{
+    width: 100%;
+    height: 100px;
+    background: #999;
+    text-align: center;
+}
+
+#head .logo{
+    float: left;
+    width: 200px;
+    height: 100px;
+    background: #111;
+}
+#head .nav{
+    float: right;
+    margin-top: 25px;
+    width: 600px;
+    background: #555;
+}
+#head .nav li {
+    text-align: center;
+    list-style: none;
+    position: relative;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+#head .nav li a {
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+#head .nav li .submenu{
+    display: none;
+    position: absolute;
+    background: #2c3e50; 
+}
+#head .nav li .submenu li {
+    width: 100%;
+}
+
+#banner {
+    width: 100%;
+    height: 300px;
+    background: #333;
+}
+
+#content div {
+    float: left;
+    height: 200px;
+    width: calc(100% / 3);
+}
+#content > .cont-1 {
+    background: #888;
+}
+#content > .cont-2 {
+    background: #999;
+}
+#content > .cont-3 {
+    background: #777;
+}
+
+#footer {
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+footer > .foot1 {background: #444}
+footer > .foot2 {background: #555}
+footer > .foot3 {background: #666}

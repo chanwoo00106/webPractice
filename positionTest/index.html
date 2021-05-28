@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>position test</title>
+    <style>
+        #main {margin: 100px auto; width: 500px; height: 500px; position: relative;}
+        #main div {height: calc(100% / 2);}
+        #div1 {background: #ddd;}
+        #div2 {background: #aaa; position: absolute; left: 20px; top: 30px; width: 100%;}
+    </style>
+</head>
+<body>
+    <main id="main">
+        <div id="div1">div1</div>
+        <div id="div2">div2</div>
+    </main>
+</body>
+</html>

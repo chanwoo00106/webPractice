@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>대한은행</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrap" class="clearfix">
+        <aside id="side">
+           <!--logo-->
+            <h1 class="logo">로고</h1>
+            
+            <!--nav-->
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Menu1</a>
+                        <ul class="submenu">
+                            <li><a href="#">SubMenu1</a></li>
+                            <li><a href="#">SubMenu2</a></li>
+                            <li><a href="#">SubMenu3</a></li>
+                            <li><a href="#">SubMenu4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu2</a>
+                        <ul class="submenu">
+                            <li><a href="#">SubMenu1</a></li>
+                            <li><a href="#">SubMenu2</a></li>
+                            <li><a href="#">SubMenu3</a></li>
+                            <li><a href="#">SubMenu4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu3</a>
+                        <ul class="submenu">
+                            <li><a href="#">SubMenu1</a></li>
+                            <li><a href="#">SubMenu2</a></li>
+                            <li><a href="#">SubMenu3</a></li>
+                            <li><a href="#">SubMenu4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu4</a>
+                        <ul class="submenu">
+                            <li><a href="#">SubMenu1</a></li>
+                            <li><a href="#">SubMenu2</a></li>
+                            <li><a href="#">SubMenu3</a></li>
+                            <li><a href="#">SubMenu4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+        </aside>
+        <section id="content">
+            <!--banner-->
+            <section class="banner">이미지 슬라이드</section>
+            
+            <!--contents-->
+            <section class="contents clearfix">
+                <div class="cont1">공지사항</div>
+                <div class="cont2">배너</div>
+                <div class="cont3">바로가기</div>
+            </section>
+            
+            <!--footer-->
+            <footer class="footer clearfix">
+                <div class="foot1">로고</div>
+                <div class="foot2">하단 메뉴</div>
+                <div class="foot3">Copyright</div>
+            </footer>
+            
+        </section>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(".nav > ul > li").hover(function(){
+            $(this).find(".submenu").stop().slideDown();
+        }, function(){
+            $(this).find(".submenu").stop().slideUp();
+        });
+    </script>
+</body>
+</html>

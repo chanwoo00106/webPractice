@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JUST 쇼핑몰</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="main">
+       
+        <header id="head" class="clearfix">
+            <div class="logo"></div>
+            <div class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">Menu-1</a>
+                        <ul class="submenu">
+                            <li><a href="#">text-1</a></li>
+                            <li><a href="#">text-2</a></li>
+                            <li><a href="#">text-3</a></li>
+                            <li><a href="#">text-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu-2</a>
+                        <ul class="submenu">
+                            <li><a href="#">text-1</a></li>
+                            <li><a href="#">text-2</a></li>
+                            <li><a href="#">text-3</a></li>
+                            <li><a href="#">text-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu-3</a>
+                        <ul class="submenu">
+                            <li><a href="#">text-1</a></li>
+                            <li><a href="#">text-2</a></li>
+                            <li><a href="#">text-3</a></li>
+                            <li><a href="#">text-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu-4</a>
+                    
+                        <ul class="submenu">
+                            <li><a href="#">text-1</a></li>
+                            <li><a href="#">text-2</a></li>
+                            <li><a href="#">text-3</a></li>
+                            <li><a href="#">text-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        
+        <section id="banner"></section>
+        
+        <section id="content" class="clearfix">
+            <div class="cont-1"></div>
+            <div class="cont-2"></div>
+            <div class="cont-3"></div>
+        </section>
+        
+        <footer id="footer">
+            <div class="foot1"></div>
+            <div class="foot2"></div>
+            <div class="foot3"></div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".nav li").mouseover(function(){
+            $(".nav li").find(".submenu").stop().slideDown(200);
+        });
+        $(".nav li").mouseout(function(){
+            $(".nav li").find(".submenu").stop().slideUp(200);
+        })
+    </script>
+</body>
+</html>
