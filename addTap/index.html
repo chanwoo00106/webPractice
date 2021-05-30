@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>add Tab</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main id="main">
+        
+        <!--header-->
+        <header id="header">
+            <h1 id="logo">로고</h1>
+            <div id="menu">
+                <ul>
+                    <li><a href="#">Menu-1</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu-2</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu-3</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu-4</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        
+        <!--slide-->
+        <section id="slide">
+            <h1>이미지 슬라이드</h1>
+        </section>
+        
+        <!--contents-->
+        <section id="contents">
+            <div class="cont1">
+                <div class="tab-menu">
+                    
+                    <div class="tab-btn">
+                        <ul>
+                            <li class="active col1"><a href="#">공지사항1</a></li>
+                            <li class="col2"><a href="#">공지사항2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-cont">
+                        <div>
+                            완도 침몰작전
+                        </div>
+                        <div>
+                            김성훈 병
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont2">배너</div>
+            <div class="cont3">바로가기</div>
+        </section>
+        
+        <!--footer-->
+        <footer id="footer">
+            <div class="foot1">로고</div>
+            <div class="foot2">Copyright</div>
+            <div class="foot3">SNS</div>
+        </footer>
+        
+    </main>
+    <div id="layer">
+        <h2>title</h2>
+        <p>So easy</p>
+        <div class="close">close</div>
+    </div>
+    <div class="layer-bg"></div>
+    
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        // menu
+        $("#menu > ul > li").hover(function(){
+            $(this).find(".submenu").stop().slideDown(200);
+        }, function(){
+            $(this).find(".submenu").stop().slideUp(200);
+        });
+        
+        //tab
+        var tabBtn = $(".tab-btn > ul > li");
+        var tabCont = $(".tab-cont > div");
+        
+        tabCont.hide();
+        tabCont.eq(0).show(); // eq는 등호라는 뜻, 영어 equal의 약자
+        
+        tabBtn.click(function(){
+            tabBtn.removeClass("active");
+            tabBtn.css('background','#888');
+            $(this).addClass("active");
+            $(this).css('background', '#bbb');
+            tabCont.hide().eq($(this).index()).show();
+        });
+        //content
+        $(".cont3").click(function(){
+            $("#layer").show();
+            $(".layer-bg").show();
+        });
+        $(".close").click(function(){
+            $("#layer").hide();
+            $(".layer-bg").hide();
+        });
+    </script>
+</body>
+</html>

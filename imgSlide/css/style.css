@@ -1,0 +1,30 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: black;}
+ul {list-style: none;}
+
+#main {width: 1200px; margin: 0 auto;}
+
+
+#header {height: 100px; display: grid; grid-template-columns: 1fr 4fr;}
+#menu {float: right; width: 600px; text-align: center; margin-top: 25px; background: rgba(225,225,225,0.3);}
+#menu a {display: block; font-size: 20px; padding: 10px;}
+#menu a:hover {background: rgba(225,225,225,0.6);}
+#menu > ul > li {float: left; width: 25%; position: relative;}
+.submenu {width: 100%; position: absolute; z-index: 100; background: rgba(225,225,225,0.3); display: none;}
+
+
+#banner {height: 360px; overflow: hidden;}
+.imgList {position: relative;}
+.imgList .slideImg {position: relative;}
+.imgList .slideImg h2 {position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); color: #fff; background: rgba(225, 225,225, 0.5);
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+.imgList .slideImg img {display: block;}
+
+
+#contents {height: 200px; display: grid; grid-template-columns: 1fr 1fr 1fr;}
+
+
+#footer {height: 100px; display: grid; grid-template-columns: 1fr 4fr 1fr;}

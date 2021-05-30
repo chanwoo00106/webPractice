@@ -114,10 +114,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(".nav > ul > li").mouseover(function(){
-            $(".nav > ul > li > ul").stop().slideDown(200);                              
+            $(this).find(".submenu").stop().slideDown(200);
         });
         $(".nav > ul > li").mouseout(function(){
-            $(".nav > ul > li > ul").stop().slideUp(200);
+            $(this).find(".submenu").stop().slideUp(200);
         });
     </script>
 </body>

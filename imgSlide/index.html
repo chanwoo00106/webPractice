@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>img slide</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main id="main">
+       
+        <!--header-->
+        <header id="header">
+            <div id="logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <nav id="nav">
+                <div id="menu">
+                    <ul>
+                        <li><a href="#">Menu-1</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu-2</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu-3</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu-4</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <!--banner-->
+        <section id="banner">
+            <div class="imgList">
+                <!---->
+                <div class="slideImg">
+                   <h2>이미지1</h2>
+                    <img src="img/ban01.jpg" alt="이미지">
+                </div>
+                
+                <!---->
+                <div class="slideImg">
+                    <h2>이미지2</h2>
+                    <img src="img/ban02.jpg" alt="이미지">
+                </div>
+                
+                <!---->
+                <div class="slideImg">
+                    <h2>이미지3</h2>
+                    <img src="img/ban03.jpg" alt="이미지">
+                </div>
+            </div>
+        </section>
+        
+        <!--contents-->
+        <section id="contents">
+            <div class="cont1">
+                
+            </div>
+            <div class="cont2"></div>
+            <div class="cont3"></div>
+        </section>
+        
+        <!--footer-->
+        <footer id="footer">
+            <div class="foot1"></div>
+            <div class="foot2"></div>
+            <div class="foot3"></div>
+        </footer>
+    </main>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        //menu
+        $("#menu > ul > li").hover(function(){
+            $(this).find(".submenu").stop().slideDown(200);
+        }, function(){
+            $(this).find(".submenu").stop().slideUp(200);
+        });
+        
+        // slide img
+        var index = 1;
+        
+        setInterval(function(){
+            var slide = index * -360;
+            $(".imgList").animate({top:slide + "px"});
+            
+            
+            index++;
+            if (index === 3) index = 0;
+        },3000);
+    </script>
+</body>
+</html>

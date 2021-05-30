@@ -1,0 +1,50 @@
+* {margin: 0; padding: 0; text-align: center; list-style: none;}
+a {color: white; text-decoration: none;}
+
+#main {width: 1200px; height: 700px; margin: 0 auto; background: #aaa;}
+
+
+#header {height: 100px; display: flex;}
+#header #logo {width: 200px; background: #ddd;}
+
+#header #menu {width: 1000px; background: #ccc;}
+#menu > ul {float: right; display: flex; width: 600px; padding-top: 25px; font-size: 20px;}
+#menu > ul > li {float: left; width: 25%;}
+#menu ul li {position: relative; background: #aaa;}
+#menu ul li a {padding: 10px; display: block;}
+#menu ul li a:hover {background: #bbb;}
+#menu ul li .submenu {display: none; position: absolute; width: 100%;}
+#menu ul li .submenu li {width: 100%;}
+
+
+#slide {height: 300px; background: #eee;}
+
+
+#contents {height: 200px; display: flex;}
+.cont1, .cont2, .cont3 {width: calc(100% / 3); border: 1px solid black;}
+
+.tab-menu {padding: 10px;}
+.tab-menu .tab-btn ul {display: flex;}
+.col1 {background: #bbb;}
+.col2 {background: #888;}
+.tab-menu .tab-btn li a {padding: 10px; display: block;}
+.tab-menu .tab-cont {background: #bbb; padding: 20px; height: 100%;}
+.tab-cont div {text-align: left;}
+
+.active {text-decoration: underline; background-color: #bbb;}
+
+
+#footer {height: 100px; display: grid; grid-template-columns: 1fr 4fr 1fr;}
+#footer div {border: 1px solid black;}
+
+
+#layer {
+    width: 500px; height: 500px; border: 2px solid black; background: white;
+    position: absolute; top: 50%; left: 50%;
+    margin-left: -250px; margin-top: -250px;
+    z-index: 1;
+    display: none;
+}
+#layer p {padding: 10px; font-size: 100px;}
+#layer .close {position: absolute; right: 20px; bottom: 20px;}
+.layer-bg {width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: rgb(0,0,0,0.6); z-index: 0; display: none;}
