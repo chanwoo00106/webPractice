@@ -79,7 +79,20 @@
         <!--contents-->
         <section id="contents">
             <div class="cont1">
-                
+                <div class="tabMenu">
+                    <ul>
+                        <li>공지사항</li>
+                        <li>갤러리</li>
+                    </ul>
+                </div>
+                <div class="tabCont">
+                    <div>
+                        아아아아아ㅏ아ㅏ
+                    </div>
+                    <div>
+                        여기는 갤러리 입니다!!!
+                    </div>
+                </div>
             </div>
             <div class="cont2"></div>
             <div class="cont3"></div>
@@ -92,8 +105,45 @@
             <div class="foot3"></div>
         </footer>
     </main>
+    <div id="layer">
+        <h1>Title</h1>
+        <p>
+            아아아아아아ㅏ아아아아ㅏㅏ아아아아아아아아ㅏ아앙아아아아아아아ㅏ<br>
+            걍 아무말이나 해!!!
+        </p>
+        <span class="close">close</span>
+    </div>
+    
+    <div id="layer-bg"></div>
+    
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
+        //layer
+        $(".cont3").click(function(){
+            $("#layer").show();
+            $("#layer-bg").show();
+        });
+        $(".close").click(function(){
+            $("#layer").hide();
+            $("#layer-bg").hide();
+        });
+        
+        
+        //tabMenu
+        var tabmenu = $(".tabMenu ul li");
+        var tabcont = $(".tabCont div");
+        tabmenu.eq(0).css("background","#f1f2f6");
+        tabcont.eq(1).hide();
+        
+        tabmenu.click(function(){
+            var index = $(this).index();
+            tabmenu.css("background","#fff");
+            tabmenu.eq(index).css("background","#f1f2f6");
+            tabcont.hide();
+            tabcont.eq(index).show();
+        });
+        
+        
         //menu
         $("#menu > ul > li").hover(function(){
             $(this).find(".submenu").stop().slideDown(200);
