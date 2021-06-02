@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="main">
+        <header id="header">
+            <div id="logo"></div>
+            <nav id="nav">
+                <div id="menu">
+                    <ul>
+                        <li><a href="#">Menu1</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu2</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu3</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu4</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section id="banner"></section>
+        <section id="contents">
+            <div class="cont1"></div>
+            <div class="cont2"></div>
+            <div class="cont3"></div>
+        </section>
+        <footer id="footer">
+            <div class="foot1"></div>
+            <div class="foot2"></div>
+            <div class="foot3"></div>
+        </footer>
+    </main>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $("#menu ul li").hover(function(){
+            $(this).find(".submenu").stop().slideDown(200);
+        }, function(){
+            $(this).find(".submenu").stop().slideUp(200);
+        });
+    </script>
+</body>
+</html>

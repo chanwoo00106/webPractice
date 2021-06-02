@@ -1,0 +1,21 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: black;}
+ul {list-style: none;}
+
+#main {margin: 0 auto; width: 1200px;}
+
+#header {width: 100%; height: 100px; display: grid; grid-template-columns: 1fr 5fr;}
+#menu {
+    float: right; text-align: center;
+    margin-top: 25px; width: 600px;
+    font-size: 20px;
+}
+#menu > ul > li {width: 25%; float: left; background: #a4b0be;}
+#menu a { padding: 10px; display: block; color: #fff;}
+.submenu {display: none;}
+
+#banner {width: 100%; height: 300px;}
+
+#contents {width: 100%; height: 200px; display: grid; grid-template-columns: 1fr 1fr 1fr;}
+
+#footer {width: 100%; height: 100px; display: grid; grid-template-columns: 1fr 5fr 1fr;}
