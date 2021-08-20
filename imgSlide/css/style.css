@@ -16,8 +16,13 @@ ul {list-style: none;}
 #banner {height: 360px; overflow: hidden;}
 .imgList {position: relative;}
 .imgList .slideImg {position: relative;}
-.imgList .slideImg h2 {position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%); color: #fff; background: rgba(225, 225,225, 0.5);
+.imgList .slideImg h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(225, 225,225, 0.5);
     padding: 10px 30px;
     border-radius: 25px;
 }
