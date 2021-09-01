@@ -57,3 +57,10 @@
     display: block;
 }
 /* main-end */
+/* content-start */
+#contents {
+    height: 30vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+/* content-end */
