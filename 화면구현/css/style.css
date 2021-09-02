@@ -83,15 +83,19 @@
 }
 #footer .foot div {
     line-height: 2.3;
+    height: 50%;
 }
 .img-list {
     display: flex;
     overflow: hidden;
-    width: 840px;
     margin: 0 auto;
+    max-width: 840px;
+    position: relative;
 }
 #footer .foot img {
     height: 100%;
     width: 50%;
+    position: absolute;
+    transform: translateX(-50%);
 }
 /* footer-end */

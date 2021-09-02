@@ -44,17 +44,37 @@
         <footer id="footer">
             <div><a href="/"><img src="https://www.gangjin.go.kr/images/www/common/logo.jpg" alt="logo"></a></div>
             <div class="foot">
-                <div>&copy; 2020. 변찬우 all rights reserved.</div>
                 <div class="img-list">
                     <img src="https://www.gangjin.go.kr/build/images/1618/16188244/1618824446.jpg/420x51x85/420x51_1618824446.jpg" alt="footer-img">
                     <img src="https://www.gangjin.go.kr/build/images/1618/16188244/1618824474.jpg/420x51x85/420x51_1618824474.jpg" alt="footer-img">
                     <img src="https://www.gangjin.go.kr/build/images/1618/16188244/1618824413.jpg/420x51x85/420x51_1618824413.jpg" alt="footer-img">
+                    <img src="https://gangjin.go.kr/build/images/1623/16230574/1623057423.jpg/420x51x85/420x51_1623057423.jpg" alt="footer-img">
+                    <img src="https://www.gangjin.go.kr/build/images/1618/16188243/1618824358.jpg/420x51x85/420x51_1618824358.jpg" alt="footer-img">
+                    <img src="https://www.gangjin.go.kr/build/images/1623/16230573/1623057391.jpg/420x51x85/420x51_1623057391.jpg" alt="footer-img">
                 </div>
+                <div>&copy; 2021. 변찬우 all rights reserved.</div>
             </div>
         </footer>
     </div>
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
+        // setting
+        $('.img-list img').eq(0).css({'left': '-50%'});
+        $('.img-list img').eq(1).css({'left': '0'});
+        $('.img-list img').eq(2).css({'left': '50%'});
+        $('.img-list img').eq(3).css({'left': '100%'});
+        $('.img-list img').eq(4).css({'left': '150%'});
+        $('.img-list img').eq(5).css({'left': '200%'});
+
+        var list = [0, 1, 2, 3, 4, 5];
+        function mix(a){
+            a.splice(6, 0, a[0]);
+            a.splice(0, 1);
+            console.log(a);
+            return a;
+        }
+        
+
         // main slide
         var a = 0;
         setInterval(function() {
@@ -65,6 +85,15 @@
         }, 3000);
 
         // footer image slide
+        setInterval(function() {
+            list = mix(list);
+            $('.img-list img').eq(list[0]).animate({'left': '-50%'}, 800);
+            $('.img-list img').eq(list[1]).animate({'left': '0'}, 800);
+            $('.img-list img').eq(list[2]).animate({'left': '50%'}, 800);
+            $('.img-list img').eq(list[3]).animate({'left': '100%'}, 800);
+            $('.img-list img').eq(list[4]).animate({'left': '150%'}, 800);
+            $('.img-list img').eq(list[5]).css({'left': '250%'});
+        }, 3000)
     </script>
 </body>
 </html>
