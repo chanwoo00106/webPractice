@@ -9,7 +9,7 @@
     <div id="wrap">
         <header id="header">
             <h1>
-                <a href=""><img src="https://blog.kakaocdn.net/dn/858Ul/btqxt7nEaiN/KnpB7xN8k7gD4TwbHnBPmk/img.jpg" alt="logo"></a>
+                <a href="/"><img src="https://blog.kakaocdn.net/dn/858Ul/btqxt7nEaiN/KnpB7xN8k7gD4TwbHnBPmk/img.jpg" alt="logo"></a>
             </h1>
             <nav>
                 <ul>
@@ -42,14 +42,29 @@
             </article>
         </section>
         <footer id="footer">
+            <div><a href="/"><img src="https://www.gangjin.go.kr/images/www/common/logo.jpg" alt="logo"></a></div>
             <div class="foot">
-                어쩌고 저쩌고 footer 입니다
+                <div>&copy; 2020. 변찬우 all rights reserved.</div>
+                <div class="img-list">
+                    <img src="https://www.gangjin.go.kr/build/images/1618/16188244/1618824446.jpg/420x51x85/420x51_1618824446.jpg" alt="footer-img">
+                    <img src="https://www.gangjin.go.kr/build/images/1618/16188244/1618824474.jpg/420x51x85/420x51_1618824474.jpg" alt="footer-img">
+                    <img src="https://www.gangjin.go.kr/build/images/1618/16188244/1618824413.jpg/420x51x85/420x51_1618824413.jpg" alt="footer-img">
+                </div>
             </div>
         </footer>
     </div>
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-        
+        // main slide
+        var a = 0;
+        setInterval(function() {
+            $('.slide-img').eq(a).fadeOut();
+            if (a === 2) a = 0;
+            else a++;
+            $('.slide-img').eq(a).fadeIn();
+        }, 3000);
+
+        // footer image slide
     </script>
 </body>
 </html>

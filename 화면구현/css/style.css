@@ -6,7 +6,6 @@
     width: 80vw;
     margin: 0 auto;
     margin-top: 1%;
-    font-family: 'Noto Serif KR', serif;
 }
 
 /* header-start */
@@ -63,4 +62,36 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+#contents article {
+    padding: 5px;
+}
 /* content-end */
+/* footer-start */
+#footer {
+    margin-top: 1%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+#footer img {
+    width: 100%;
+    min-height: 50%;
+}
+#footer .foot {
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+}
+#footer .foot div {
+    line-height: 2.3;
+}
+.img-list {
+    display: flex;
+    overflow: hidden;
+    width: 840px;
+    margin: 0 auto;
+}
+#footer .foot img {
+    height: 100%;
+    width: 50%;
+}
+/* footer-end */
