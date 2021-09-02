@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
     <title>Maryang - About</title>
 </head>
 <body>
@@ -13,26 +14,35 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
+                <li><a href="/about.html">About</a></li>
             </ul>
         </nav>
     </header>
     <div id="full-page">
-        <section class="s0">
+        <section class="section s0">
             <h1>Section 1</h1>
         </section>
-        <section class="s1">
+        <section class="section s1">
             <h1>Section 2</h1>
         </section>
-        <section class="s2">
+        <section class="section s2">
             <h1>Section 3</h1>
         </section>
-        <section class="s3">
+        <section class="section s3">
             <h1>Section 4</h1>
         </section>
-        <section class="s4">
+        <section class="section s4">
             <h1>Section 5</h1>
         </section>
-    </div>    
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+
+    <script>
+        new fullpage('#full-page', {
+            licenseKey: '',
+            sectionsColor: ['#f6e58d', '#f9ca24', '#badc58', '#6ab04c', '#c7ecee']
+        })
+    </script>
 </body>
 </html>

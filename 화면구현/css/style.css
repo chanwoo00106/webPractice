@@ -103,7 +103,14 @@
 
 .about-header {
     width: 100%;
-    background-color: #fff;
-    border-bottom: #ededed solid 0.1px;
     position: fixed;
+    z-index: 1;
 }
+.section {
+    background-position: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.s0 {background-image: url(https://www.korea.kr/newsWeb/resources/attaches/2009.08/04/63278326954282270a093747d350945e.jpg);}
+.s1 {background-image: url(https://mblogthumb-phinf.pstatic.net/20130927_64/gangjingun_1380244447418pPjMg_JPEG/%B8%B6%B7%AE%C7%D722.jpg?type=w2);}
+.s2 {background-image: url(./img/까막섬.jpg);}
