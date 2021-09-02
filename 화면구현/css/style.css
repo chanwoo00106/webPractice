@@ -99,3 +99,11 @@
     transform: translateX(-50%);
 }
 /* footer-end */
+/* about */
+
+.about-header {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: #ededed solid 0.1px;
+    position: fixed;
+}
