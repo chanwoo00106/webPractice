@@ -27,15 +27,7 @@
 <body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
     <div id="wrap">
         <input type="text" readonly style="opacity: 0;" >
-        <div style="display: flex;">
-            <div class="img">
-                <img class="" src="./img/normal.png" alt="입 닫은 popcat">
-                <img class="none" src="./img/pop.png" alt="입 열은 popcat">
-            </div>
-            <div class="img">
-                <img class="" src="./img/normal.png" alt="입 닫은 popcat">
-                <img class="none" src="./img/pop.png" alt="입 열은 popcat">
-            </div>
+        <div style="width: 50%; margin: 0 auto;">
             <div class="img">
                 <img class="" src="./img/normal.png" alt="입 닫은 popcat">
                 <img class="none" src="./img/pop.png" alt="입 열은 popcat">
@@ -46,57 +38,42 @@
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 
     <script>
-
-        function changeClass(className, i) {
-            if (i) {
-                for (let i = 0; i < 2; i++){
-                    $(className).eq(0 + i).addClass("none");
-                    $(className).eq(1 + i).removeClass('none');
-                }
-            } else {
-                for (let i = 0; i< 2; i++){
-                    $(className).eq(0 + i).removeClass("none");
-                    $(className).eq(1 + i).addClass('none');
-                }
-            }
-        }
-        function reversalClass() {
-            if (Math.floor(Math.random() * 10) > 5) {
-                for (let i = 0; i< 2; i++){
-                    $('img').eq(0 + i).addClass("reversal");
-                    $('img').eq(1 + i).addClass('reversal');
-                }
-            } else {
-                for (let i = 0; i< 2; i++){
-                    $('img').eq(0 + i).removeClass("reversal");
-                    $('img').eq(1 + i).removeClass('reversal');
-                }
-            }
-        }
-
-        function donw() {
-            $('input').focus();
-            changeClass('.img img', true)
-        }
-
-        function up() {
-            $('input').focus();
-            changeClass('.img img', false);
-            reversalClass();
-        }
-
         $('input').focus();
         $('#wrap').mousedown(function() {
-            donw()
+            $('input').focus();
+            $('img').eq(0).addClass("none");
+            $('img').eq(1).removeClass('none');
+            
+            if (Math.floor(Math.random() * 10) > 5) {
+                $('img').eq(0).addClass("reversal");
+                $('img').eq(1).addClass('reversal');
+            } else {
+                $('img').eq(0).removeClass("reversal");
+                $('img').eq(1).removeClass('reversal');
+            }
         });
         $('#wrap').mouseup(function(){
-            up()
+            $('input').focus();
+            $('img').eq(0).removeClass("none");
+            $('img').eq(1).addClass('none');
+            
         });
         $('input').keydown(function() {
-            donw()
+            $('input').focus();
+            $('img').eq(0).addClass("none");
+            $('img').eq(1).removeClass('none');
+            if (Math.floor(Math.random() * 10) > 5) {
+                $('img').eq(0).addClass("reversal");
+                $('img').eq(1).addClass('reversal');
+            } else {
+                $('img').eq(0).removeClass("reversal");
+                $('img').eq(1).removeClass('reversal');
+            }
         });
         $('input').keyup(function() {
-            up()
+            $('input').focus();
+            $('img').eq(0).removeClass("none");
+            $('img').eq(1).addClass('none');
         });
     </script>
 </body>
