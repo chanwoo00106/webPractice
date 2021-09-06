@@ -149,3 +149,13 @@
 .active {
     font-weight: bold;
 }
+
+/* pop */
+
+.pop-header {
+    width: 100%;
+    position: block;
+    background: none;
+    z-index: 1;
+    padding: 0 5%;
+}
