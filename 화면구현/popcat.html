@@ -20,12 +20,37 @@
         }
     </style>
 </head>
-<body>
+<body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
     <div id="wrap">
+        <input type="text" readonly style="opacity: 0;" >
         <div class="img">
             <img src="./img/normal.png" alt="입 닫은 popcat">
             <img class="none" src="./img/pop.png" alt="입 열은 popcat">
         </div>
     </div>
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+        $('input').focus();
+        $('#wrap').mousedown(function() {
+            $('input').focus();
+            $('img').eq(0).addClass("none");
+            $('img').eq(1).removeClass('none');
+        });
+        $('#wrap').mouseup(function(){
+            $('input').focus();
+            $('img').eq(0).removeClass("none");
+            $('img').eq(1).addClass('none');
+        });
+        $('input').keydown(function() {
+            $('img').eq(0).addClass("none");
+            $('img').eq(1).removeClass('none');
+        });
+        $('input').keyup(function() {
+            $('img').eq(0).removeClass("none");
+            $('img').eq(1).addClass('none');
+        });
+    </script>
 </body>
 </html>
