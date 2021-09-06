@@ -9,7 +9,7 @@
             margin: 0;
             box-sizing: border-box;
         }
-        #wrap {
+        #popWrap {
             width: 100vw;
             height: 100vh;
             background-color: black;
@@ -23,57 +23,69 @@
             display: none;
         }
     </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
-    <div id="wrap">
-        <input type="text" readonly style="opacity: 0;" >
-        <div style="width: 50%; margin: 0 auto;">
+    <header id="header" class="about-header">
+        <h1>
+            <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a class="active" href="./popcat.html">PopCat</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="popWrap">
+        <input type="text" class="focus" readonly style="opacity: 0;" >
+        <div style="width: 30%; margin: 0 auto;">
             <div class="img">
-                <img class="" src="./img/normal.png" alt="입 닫은 popcat">
-                <img class="none" src="./img/pop.png" alt="입 열은 popcat">
+                <img class="popImg" src="./img/normal.png" alt="입 닫은 popcat">
+                <img class="popImg none" src="./img/pop.png" alt="입 열은 popcat">
             </div>
+            <input type="file" style="margin-top: 20%;" value="사진 변경">
         </div>
     </div>
 
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 
     <script>
+
+        function down() {
+            $('.focus').focus();
+            $('.popImg').eq(0).stop().addClass("none");
+            $('.popImg').eq(1).stop().removeClass('none');
+            
+            if (Math.floor(Math.random() * 10) > 5) {
+                $('.popImg').eq(0).stop().addClass("reversal");
+                $('.popImg').eq(1).stop().addClass('reversal');
+            } else {
+                $('.popImg').eq(0).stop().removeClass("reversal");
+                $('.popImg').eq(1).stop().removeClass('reversal');
+            }
+            new Audio('./mp3/Pop-sound.mp3').play();
+        }
+
+        function up() {
+            $('.focus').focus();
+            $('.popImg').eq(0).stop().removeClass("none");
+            $('.popImg').eq(1).stop().addClass('none');
+        }
+
         $('input').focus();
         $('#wrap').mousedown(function() {
-            $('input').focus();
-            $('img').eq(0).addClass("none");
-            $('img').eq(1).removeClass('none');
-            
-            if (Math.floor(Math.random() * 10) > 5) {
-                $('img').eq(0).addClass("reversal");
-                $('img').eq(1).addClass('reversal');
-            } else {
-                $('img').eq(0).removeClass("reversal");
-                $('img').eq(1).removeClass('reversal');
-            }
+            down();
         });
         $('#wrap').mouseup(function(){
-            $('input').focus();
-            $('img').eq(0).removeClass("none");
-            $('img').eq(1).addClass('none');
-            
+            up();
         });
         $('input').keydown(function() {
-            $('input').focus();
-            $('img').eq(0).addClass("none");
-            $('img').eq(1).removeClass('none');
-            if (Math.floor(Math.random() * 10) > 5) {
-                $('img').eq(0).addClass("reversal");
-                $('img').eq(1).addClass('reversal');
-            } else {
-                $('img').eq(0).removeClass("reversal");
-                $('img').eq(1).removeClass('reversal');
-            }
+            down();
         });
         $('input').keyup(function() {
-            $('input').focus();
-            $('img').eq(0).removeClass("none");
-            $('img').eq(1).addClass('none');
+            up();
         });
     </script>
 </body>
