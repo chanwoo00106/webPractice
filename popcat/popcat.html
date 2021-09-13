@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pop Cat</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #popWrap {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .reversal {
+            transform: scaleX(-1);
+        }
+
+        .none {
+            display: none;
+        }
+
+        label {
+            color: white;
+            padding-right: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
+    <div id="popWrap">
+        <input type="text" class="focus" readonly style="opacity: 0;">
+        <div style="width: 30%; margin: 0 auto;">
+            <div class="img">
+                <img class="popImg" src="./img/normal.png" style="width: 80%;" alt="입 닫은 popcat">
+                <img class="popImg none" src="./img/pop.png" style="width: 80%;" alt="입 열은 popcat">
+            </div>
+        </div>
+        <div style="display: flex; position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%);">
+            <label for="start">start</label>
+            <input id="SsetImg" name="start" type="file" value="사진 변경">
+            <label for="end">end</label>
+            <input id="EsetImg" name="end" type="file" value="사진 변경">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+
+        $('#SsetImg').change(function (e) {
+            const a = e.target.files
+            const url = URL.createObjectURL(a[0])
+            $('.popImg').eq(0).attr("src", url);
+            $('.focus').focus();
+        });
+        $('#EsetImg').change(function (e) {
+            const a = e.target.files
+            const url = URL.createObjectURL(a[0])
+            $('.popImg').eq(1).attr("src", url);
+            $('.focus').focus();
+        });
+
+        function down() {
+            $('.focus').focus();
+            $('.popImg').eq(0).stop().addClass("none");
+            $('.popImg').eq(1).stop().removeClass('none');
+
+            if (Math.floor(Math.random() * 10) > 5) {
+                $('.popImg').eq(0).stop().addClass("reversal");
+                $('.popImg').eq(1).stop().addClass('reversal');
+            } else {
+                $('.popImg').eq(0).stop().removeClass("reversal");
+                $('.popImg').eq(1).stop().removeClass('reversal');
+            }
+            new Audio('./mp3/Pop-sound.mp3').play();
+        }
+
+        function up() {
+            $('.focus').focus();
+            $('.popImg').eq(0).stop().removeClass("none");
+            $('.popImg').eq(1).stop().addClass('none');
+        }
+
+        $('.focus').focus();
+        $('#popWrap').mousedown(function () {
+            down();
+        });
+        $('#popWrap').mouseup(function () {
+            up();
+        });
+        $('input').keydown(function () {
+            down();
+        });
+        $('input').keyup(function () {
+            up();
+        });
+    </script>
+</body>
+
+</html>
