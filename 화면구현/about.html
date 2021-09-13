@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
     <title>Maryang - About</title>
 </head>
+
 <body>
     <header id="header" class="about-header">
         <h1>
-            <a href="/"><img src="./img/logo.png" alt="logo"></a>
+            <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
         </h1>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a class="active" href="/about">About</a></li>
-                <li><a href="/popcat">PopCat</a></li>
+                <li><a class="active" href="./about.html">About</a></li>
+                <li><a href="./popcat.html">PopCat</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +38,7 @@
             <h1>스카이뷰</h1>
         </section>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
@@ -48,14 +50,15 @@
             navigation: true,
             navigationTooltips: ['마량', '고금대교', '까막섬', '야경', '스카이뷰'],
             scrollingSpeed: 1000,
-            onLeave: function(origin, destination, direction){
+            onLeave: function (origin, destination, direction) {
                 console.log(origin.index, destination.index, $('section.section').eq(destination.index))
                 $('.section h1').eq(destination.index).animate({ "opacity": 1, "bottom": "30%" }, 1000);
             },
-            afterLoad: function(origin, destination, direction){
+            afterLoad: function (origin, destination, direction) {
                 $('.section h1').eq(origin.index).css({ "opacity": 0, "bottom": "40%" });
             }
         })
     </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>Pop Cat</title>
@@ -9,17 +10,21 @@
             margin: 0;
             box-sizing: border-box;
         }
+
         #popWrap {
             width: 100vw;
             height: 100vh;
             background-color: black;
         }
+
         .reversal {
             transform: scaleX(-1);
         }
+
         .none {
             display: none;
         }
+
         label {
             color: white;
             padding-right: 10px;
@@ -27,21 +32,22 @@
     </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
     <div id="popWrap">
         <header id="header" class="pop-header">
             <h1>
-                <a href="/"><img src="./img/logo.png" alt="logo"></a>
+                <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
             </h1>
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a class="active" href="/popcat">PopCat</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="./popcat.html">PopCat</a></li>
                 </ul>
             </nav>
         </header>
-        <input type="text" class="focus" readonly style="opacity: 0;" >
+        <input type="text" class="focus" readonly style="opacity: 0;">
         <div style="width: 30%; margin: 0 auto;">
             <div class="img">
                 <img class="popImg" src="./img/normal.png" style="width: 80%;" alt="입 닫은 popcat">
@@ -56,17 +62,17 @@
         </div>
     </div>
 
-    <script  src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
     <script>
 
-        $('#SsetImg').change(function(e) {
+        $('#SsetImg').change(function (e) {
             const a = e.target.files
             const url = URL.createObjectURL(a[0])
             $('.popImg').eq(0).attr("src", url);
             $('.focus').focus();
         });
-        $('#EsetImg').change(function(e) {
+        $('#EsetImg').change(function (e) {
             const a = e.target.files
             const url = URL.createObjectURL(a[0])
             $('.popImg').eq(1).attr("src", url);
@@ -77,7 +83,7 @@
             $('.focus').focus();
             $('.popImg').eq(0).stop().addClass("none");
             $('.popImg').eq(1).stop().removeClass('none');
-            
+
             if (Math.floor(Math.random() * 10) > 5) {
                 $('.popImg').eq(0).stop().addClass("reversal");
                 $('.popImg').eq(1).stop().addClass('reversal');
@@ -95,18 +101,19 @@
         }
 
         $('.focus').focus();
-        $('#popWrap').mousedown(function() {
+        $('#popWrap').mousedown(function () {
             down();
         });
-        $('#popWrap').mouseup(function(){
+        $('#popWrap').mouseup(function () {
             up();
         });
-        $('input').keydown(function() {
+        $('input').keydown(function () {
             down();
         });
-        $('input').keyup(function() {
+        $('input').keyup(function () {
             up();
         });
     </script>
 </body>
+
 </html>
