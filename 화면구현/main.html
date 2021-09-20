@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
@@ -36,17 +36,15 @@
                 </ul>
             </nav>
         </header>
-        <h1 class="title">마량은 지금...</h1>
+        <h1 class="title"></h1>
     </div>
     <script>
         const wrap = document.querySelector('#wrap');
         const title = document.querySelector('.title');
-
+        title.innerText = Date().slice(16,24);
         setInterval(() => {
             title.innerText = Date().slice(16,24);
-        }, 500)
-
-        
+        }, 500);
     </script>
 </body>
 </html>
