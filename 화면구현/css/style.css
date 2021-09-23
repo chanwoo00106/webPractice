@@ -41,8 +41,12 @@
 }
 /* header-end */
 /* main-start */
-main img {
+.img-bg {
     width: 100%;
+    height: 80vh;
+    background-image: url(/img/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* main-end */
 /* content-start */
