@@ -12,10 +12,13 @@
 
 /* header-start */
 #header {
+    padding: 5px;
     font-family: 'Noto Sans KR', sans-serif;
     display: flex;
     justify-content: flex-start;
     height: 10vh;
+    position: fixed;
+    z-index: 5;
 }
 #header h1 a {
     text-decoration: none;
@@ -39,7 +42,7 @@
 /* header-end */
 /* main-start */
 #main {
-    height: 40vh;
+    height: 60vh;
     overflow: hidden;
     position: relative; 
 }
