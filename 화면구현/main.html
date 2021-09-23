@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
@@ -10,9 +11,11 @@
             height: 100vh;
             margin: 0;
         }
+
         #header {
             margin-top: 0;
         }
+
         .title {
             position: absolute;
             top: 50%;
@@ -22,11 +25,12 @@
         }
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <header id="header">
             <h1>
-                <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+                <a href="./index.html">Gang Jin</a>
             </h1>
             <nav>
                 <ul>
@@ -41,10 +45,11 @@
     <script>
         const wrap = document.querySelector('#wrap');
         const title = document.querySelector('.title');
-        title.innerText = Date().slice(16,24);
+        title.innerText = Date().slice(16, 24);
         setInterval(() => {
-            title.innerText = Date().slice(16,24);
+            title.innerText = Date().slice(16, 24);
         }, 500);
     </script>
 </body>
+
 </html>

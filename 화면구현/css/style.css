@@ -17,9 +17,10 @@
     justify-content: flex-start;
     height: 10vh;
 }
-#header img {
-    width: 15vw;
-    height: 100%;
+#header h1 a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 3rem;
 }
 #header ul {
     list-style: none;
