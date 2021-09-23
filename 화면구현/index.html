@@ -22,94 +22,14 @@
         </nav>
     </header>
 
-    <main id="main">
-        <div class="slide-img">
-            <img src="./img/main.jpg" alt="slide1">
-        </div>
-        <div class="slide-img">
-            <img src="./img/고금대교뷰.jpg" alt="slide2">
-        </div>
-        <div class="slide-img">
-            <img src="./img/마량미항.jpg" alt="slide3">
-        </div>
+    <main>
+        <img src="./img/main.jpg" alt="main">
     </main>
-    <section id="contents">
-        <article class="cont1">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52624.11305602177!2d126.78647020017895!3d34.47734500590222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3572f62d3d87feb5%3A0x7a1ad0fa01b53973!2z7KCE652864Ko64-EIOqwleynhOq1sCDrp4jrn4nrqbQ!5e0!3m2!1sko!2skr!4v1630507479525!5m2!1sko!2skr"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </article>
-        <article class="cont2">
-            <a width="100%" height="100%" class="twitter-timeline"
-                href="https://twitter.com/gangjingun?ref_src=twsrc%5Etfw">Tweets by gangjingun</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </article>
-        <article class="cont3">
-            <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/zX9xdRLuFkI"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </article>
-    </section>
-    <footer id="footer">
-        <div><a href="/"><img src="https://www.gangjin.go.kr/images/www/common/logo.jpg" alt="logo"></a></div>
-        <div class="foot">
-            <div class="img-list">
-                <img src="https://www.gangjin.go.kr/build/images/1618/16188244/1618824446.jpg/420x51x85/420x51_1618824446.jpg"
-                    alt="footer-img">
-                <img src="https://www.gangjin.go.kr/build/images/1618/16188244/1618824474.jpg/420x51x85/420x51_1618824474.jpg"
-                    alt="footer-img">
-                <img src="https://www.gangjin.go.kr/build/images/1618/16188244/1618824413.jpg/420x51x85/420x51_1618824413.jpg"
-                    alt="footer-img">
-                <img src="https://gangjin.go.kr/build/images/1623/16230574/1623057423.jpg/420x51x85/420x51_1623057423.jpg"
-                    alt="footer-img">
-                <img src="https://www.gangjin.go.kr/build/images/1618/16188243/1618824358.jpg/420x51x85/420x51_1618824358.jpg"
-                    alt="footer-img">
-                <img src="https://www.gangjin.go.kr/build/images/1623/16230573/1623057391.jpg/420x51x85/420x51_1623057391.jpg"
-                    alt="footer-img">
-            </div>
-            <div>&copy; 2021. 변찬우 all rights reserved.</div>
-        </div>
-    </footer>
+
     <div style="height: 1000000000px;"></div>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-        // setting
-        $('.img-list img').eq(0).css({ 'left': '-50%' });
-        $('.img-list img').eq(1).css({ 'left': '0' });
-        $('.img-list img').eq(2).css({ 'left': '50%' });
-        $('.img-list img').eq(3).css({ 'left': '100%' });
-        $('.img-list img').eq(4).css({ 'left': '150%' });
-        $('.img-list img').eq(5).css({ 'left': '200%' });
 
-        var list = [0, 1, 2, 3, 4, 5];
-        function mix(a) {
-            a.splice(6, 0, a[0]);
-            a.splice(0, 1);
-            console.log(a);
-            return a;
-        }
-
-
-        // main slide
-        var a = 0;
-        setInterval(function () {
-            $('.slide-img').eq(a).fadeOut();
-            if (a === 2) a = 0;
-            else a++;
-            $('.slide-img').eq(a).fadeIn();
-        }, 3000);
-
-        // footer image slide
-        setInterval(function () {
-            list = mix(list);
-            $('.img-list img').eq(list[0]).animate({ 'left': '-50%' }, 800);
-            $('.img-list img').eq(list[1]).animate({ 'left': '0' }, 800);
-            $('.img-list img').eq(list[2]).animate({ 'left': '50%' }, 800);
-            $('.img-list img').eq(list[3]).animate({ 'left': '100%' }, 800);
-            $('.img-list img').eq(list[4]).animate({ 'left': '150%' }, 800);
-            $('.img-list img').eq(list[5]).css({ 'left': '250%' });
-        }, 3000)
     </script>
 </body>
 
