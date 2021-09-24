@@ -10,6 +10,7 @@
         body {
             background-color: black;
             position: relative;
+            margin: 0;
         }
 
         h1 {
@@ -21,6 +22,8 @@
             width: 100px;
             height: 100px;
             background-color: red;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
@@ -51,8 +54,7 @@
             // console.log(1);
             mx += (x - mx) * speed;
             my += (y - my) * speed;
-            cursor_item.style.top = my + "px";
-            cursor_item.style.left = mx + "px";
+            cursor_item.style.transform = `translate(${mx}px, ${my}px)`;
             window.requestAnimationFrame(loop);
         }
     </script>

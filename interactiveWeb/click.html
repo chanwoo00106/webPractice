@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body {
+            background-color: black;
+            position: relative;
+            margin: 0;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        .cursor_item {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            top: 0;
+            left: 0;
+            margin: -50px 0 0 -50px;
+            transition: all .4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+        }
+
+        button {
+            border: none;
+            font-size: 3rem;
+            font-weight: bold;
+            background-color: #fff;
+            color: red;
+            padding: 30px 80px;
+            margin: 50px;
+            cursor: pointer;
+            transition: all .5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+        }
+
+        button:hover {
+            background-color: red;
+            color: #fff;
+            font-size: 80px;
+            padding: 80px 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>START</button>
+    <div class="cursor_item"></div>
+    <script>
+        let x = 0;
+        let y = 0;
+        let mx = 0;
+        let my = 0;
+        let speed = 0.08;
+        const cursor_item = document.querySelector(".cursor_item");
+        window.onload = function () {
+            window.addEventListener("click", mousFunc, false);
+
+            function mousFunc(e) {
+                x = e.clientX;
+                y = e.clientY;
+                cursor_item.style.transform = `translate(${x}px, ${y}px)`;
+                // console.log(e.clientX, e.clientY)
+            }
+            // loop();
+        }
+
+        // function loop() {
+        //     // console.log(1);
+        //     mx += (x - mx) * speed;
+        //     my += (y - my) * speed;
+        //     cursor_item.style.top = my + "px";
+        //     cursor_item.style.left = mx + "px";
+        //     window.requestAnimationFrame(loop);
+        // }
+    </script>
+</body>
+
+</html>
