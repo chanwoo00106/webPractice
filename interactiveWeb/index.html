@@ -29,16 +29,31 @@
     <h1>test</h1>
     <div class="cursor_item"></div>
     <script>
+        let x = 0;
+        let y = 0;
+        let mx = 0;
+        let my = 0;
+        let speed = 0.08;
+        const cursor_item = document.querySelector(".cursor_item");
         window.onload = function () {
             const h1 = document.querySelector('h1');
-            const cursor_item = document.querySelector(".cursor_item");
             window.addEventListener("mousemove", mousFunc, false);
 
             function mousFunc(e) {
-                cursor_item.style.transform = "translate(" + e.clientX + "px, " + e.clientY + "px)"
-                h1.innerHTML = "x: " + e.clientX + " y: " + e.clientY;
-                console.log(e.clientX, e.clientY)
+                x = e.clientX;
+                y = e.clientY;
+                h1.innerHTML = "x: " + x + " y: " + y;
+                // console.log(e.clientX, e.clientY)
             }
+            loop();
+        }
+        function loop() {
+            // console.log(1);
+            mx += (x - mx) * speed;
+            my += (y - my) * speed;
+            cursor_item.style.top = my + "px";
+            cursor_item.style.left = mx + "px";
+            window.requestAnimationFrame(loop);
         }
     </script>
 </body>
