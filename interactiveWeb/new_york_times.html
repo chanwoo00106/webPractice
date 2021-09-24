@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new york times</title>
+    <style>
+        img {
+            position: absolute;
+        }
+
+        .vod {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 1000px; margin: 0 auto;">
+        <img src="https://paidpost-assets.nyt.com/paidpost/allbirds/birds-eye-view/images/1-b90e91a4.png">
+        <img src="https://paidpost-assets.nyt.com/paidpost/allbirds/birds-eye-view/images/2-f3fd6cf5.png">
+        <div class="vod"><video autoplay="" playsinline="" loop="" muted=""
+                src="https://paidpost-assets.nyt.com/paidpost/allbirds/birds-eye-view/videos/3-27c8c3ea.webm"></video>
+        </div>
+        <img src="https://paidpost-assets.nyt.com/paidpost/allbirds/birds-eye-view/images/4-105dd65b.png">
+        <img src="https://paidpost-assets.nyt.com/paidpost/allbirds/birds-eye-view/images/5-ac49bfdc.png">
+    </div>
+
+
+    <script>
+        let x = 0, y = 0, mx = 0, my = 0, speed = 0.009;
+        const img = document.querySelectorAll("img");
+        const bird = document.querySelector('.vod');
+
+        window.onload = function () {
+            window.addEventListener("mousemove", mousFunc, false);
+
+            function mousFunc(e) {
+                x = (e.clientX - window.innerWidth / 2);
+                y = (e.clientY - window.innerHeight / 2);
+                // cursor_item.style.transform = `translate(${x}px, ${y}px)`;
+                // console.log(e.clientX, e.clientY)
+            }
+            loop();
+        }
+        function loop() {
+            // console.log(1);
+            mx += (x - mx) * speed;
+            my += (y - my) * speed;
+
+            img[0].style.transform = `translate(${-mx / 10}px, ${-my / 10}px)`;
+            img[1].style.transform = `translate(${-mx / 8}px, ${-my / 8}px)`;
+            img[2].style.transform = `translate(${-mx / 6}px, ${-my / 6}px)`;
+            img[3].style.transform = `translate(${-mx / 5}px, ${-my / 5}px)`;
+            bird.style.transform = `translate(${-mx / 5}px, ${-my / 5}px)`;
+
+            window.requestAnimationFrame(loop);
+        }
+    </script>
+</body>
+
+</html>
