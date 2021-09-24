@@ -6,9 +6,17 @@ let x = 0, y = 0, mx = 0, my = 0;
 
 window.onload = () => {
     yes.addEventListener("mouseover", function() {
-        console.log("hello");
         cursor.style.transform = `scale(.3)`;
-    })
+    });
+    yes.addEventListener("mouseout", function() {
+        cursor.style.transform = `scale(1)`;
+    });
+    no.addEventListener("mouseover", function() {
+        cursor.style.transform = `scale(.3)`;
+    });
+    no.addEventListener("mouseout", function() {
+        cursor.style.transform = `scale(1)`;
+    });
 
     window.addEventListener("mousemove", e => {
 
