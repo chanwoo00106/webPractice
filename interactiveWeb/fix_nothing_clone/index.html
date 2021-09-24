@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body {
+            background-color: black;
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        /* .cursor_item {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            top: 0;
+            left: 0;
+        } */
+        .human {
+            position: absolute;
+            left: 50%;
+            width: 300px;
+            transform: translateX(-50%);
+            z-index: 5;
+        }
+
+        /* .bg {
+            position: absolute;
+            left: 50%;
+            width: 300px;
+            transform: translateX(-50%);
+            width: 1000px;
+            height: 500px;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>test</h1>
+    <!-- <div class="cursor_item"></div> -->
+    <img src="./img/layer-7.png" class="human" alt="human">
+    <img src="./img/layer-1.jpg" class="bg" alt="벽">
+    <script>
+        let x = 0;
+        let y = 0;
+        let mx = 0;
+        let my = 0;
+        let speed = 0.009;
+        const human = document.querySelector(".human");
+        const h1 = document.querySelector('h1');
+        const bg = document.querySelector('.bg');
+
+        window.onload = function () {
+            window.addEventListener("mousemove", mousFunc, false);
+
+            function mousFunc(e) {
+                x = (e.clientX - window.innerWidth / 2);
+                y = (e.clientY - window.innerHeight / 2);
+                // console.log(e.clientX, e.clientY)
+            }
+            loop();
+        }
+        function loop() {
+            // console.log(1);
+            mx += (x - mx) * speed;
+            my += (y - my) * speed;
+
+            h1.innerHTML = `x: ${x} mx: ${mx}`;
+            human.style.transform = `translate(${-mx / 6}px, ${-my / 6}px)`;
+            bg.style.transform = `translate(${mx / 6}px, ${my / 6}px)`;
+            window.requestAnimationFrame(loop);
+        }
+    </script>
+</body>
+
+</html>
