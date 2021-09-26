@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>parallax page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>인터랙티브</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/interactive.css" />
 </head>
 
 <body>
-    <div id="wrap">
-        <section class="imgs">
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
+    <main>
+        <div class="progress"><span class="progressBar"></span></div>
+
+        <section class="mainPage">
+            <div class="imageWrap">
+                <div class="parallax_image" id="parallax_0"></div>
+                <div class="parallax_image" id="parallax_1"></div>
+                <div class="parallax_image" id="parallax_2"></div>
+                <div class="parallax_image" id="parallax_3"></div>
+                <div class="parallax_image" id="parallax_4"></div>
+                <div class="parallax_image" id="parallax_5"></div>
+            </div>
         </section>
-    </div>
-    <script src="./script.js"></script>
+
+        <section class="subPage">
+            <div id="parallax_6"></div>
+            <div class="innerWrap">
+                <div class="contWrap">
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 
 </html>
