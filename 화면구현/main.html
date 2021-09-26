@@ -4,51 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
-    <title>main</title>
-    <style>
-        #wrap {
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-        }
-
-        #header {
-            margin-top: 0;
-        }
-
-        .title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 4rem;
-        }
-    </style>
+    <title>Maryang</title>
 </head>
 
 <body>
-    <div id="wrap">
-        <header id="header">
-            <h1>
-                <a href="./index.html">Gang Jin</a>
-            </h1>
-            <nav>
-                <ul>
-                    <li><a class="active" href="/">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./shop.html">Shop</a></li>
-                </ul>
-            </nav>
-        </header>
-        <h1 class="title"></h1>
-    </div>
+
+    <header id="header">
+        <h1>
+            <a href="./index.html">Gang Jin</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a class="active" href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="img-bg"></div>
+
+    <section class="slide-down">
+
+    </section>
+
+    <div style="height: 1000000000px;"></div>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-        const wrap = document.querySelector('#wrap');
-        const title = document.querySelector('.title');
-        title.innerText = Date().slice(16, 24);
-        setInterval(() => {
-            title.innerText = Date().slice(16, 24);
-        }, 500);
+        $('.slide-down').animate({ "opacity": 1, "bottom": "30%" }, 1000);
     </script>
 </body>
 

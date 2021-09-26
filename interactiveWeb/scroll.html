@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>scroll</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 10000px;
+            background: linear-gradient(150deg, red, orange, yellow, green, indigo, purple, black);
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        .progress {
+            position: fixed;
+            width: 100%;
+            height: 5px;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 10;
+        }
+
+        .bar {
+            position: absolute;
+            width: 0;
+            height: 5px;
+            top: 0;
+            left: 0;
+            background-color: yellow;
+            z-index: 11;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>scroll</h1>
+    <div class="progress">
+        <span class="bar"></span>
+    </div>
+
+    <script>
+        let scrollTop = 0;
+        const bar = document.querySelector(".bar");
+
+        window.addEventListener("scroll", e => {
+            scrollTop = document.documentElement.scrollTop;
+            // console.log("스크롤 값 : " + scrollTop);
+
+            let per = scrollTop / (document.body.scrollHeight - window.outerHeight) * 100;
+            bar.style.width = `${per}%`;
+        }, false);
+    </script>
+</body>
+
+</html>

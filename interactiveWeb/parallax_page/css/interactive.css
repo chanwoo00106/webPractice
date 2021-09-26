@@ -1,0 +1,121 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+}
+
+main .progress {
+  position: fixed;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  z-index: 10000;
+}
+
+main .progress .progressBar {
+  position: fixed;
+  width: 0%;
+  background: #ffa600;
+  height: 2px;
+  z-index: 10001;
+  -webkit-transition: width .1s ease;
+  -o-transition: width .1s ease;
+  transition: width .1s ease;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+section.mainPage {
+  background: -webkit-gradient(linear, left top, left bottom, from(#4b0220), to(#691c46));
+  background: -o-linear-gradient(#4b0220, #691c46);
+  background: linear-gradient(#4b0220, #691c46);
+  padding-bottom: 50px;
+}
+
+section.mainPage h1.title {
+  position: fixed;
+  text-align: center;
+  color: #fff;
+  font-size: 2.7rem;
+  padding-top: 20vh;
+  width: 400px;
+  left: calc(50% - 200px);
+}
+
+section.mainPage .imageWrap {
+  height: 1100px;
+  overflow-y: hidden;
+}
+
+section.mainPage .imageWrap .parallax_image {
+  position: fixed;
+  width: 100%;
+  height: inherit;
+  background-position: top center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+section.mainPage .imageWrap .parallax_image:nth-child(1) {
+  background-image: url(../img/main_0.png);
+}
+
+section.mainPage .imageWrap .parallax_image:nth-child(2) {
+  background-image: url(../img/main_1.png);
+}
+
+section.mainPage .imageWrap .parallax_image:nth-child(3) {
+  background-image: url(../img/main_2.png);
+}
+
+section.mainPage .imageWrap .parallax_image:nth-child(4) {
+  background-image: url(../img/main_3.png);
+}
+
+section.mainPage .imageWrap .parallax_image:nth-child(5) {
+  background-image: url(../img/main_4.png);
+}
+
+section.mainPage .imageWrap .parallax_image:nth-child(6) {
+  background-image: url(../img/main_5.png);
+  background-size: cover;
+}
+
+section.subPage {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#691c46));
+  background: -o-linear-gradient(#000, #691c46);
+  background: linear-gradient(#000, #691c46);
+}
+
+section.subPage #parallax_6 {
+  position: relative;
+  background: url(../img/main_6.png) bottom center no-repeat;
+  background-size: auto 1100px;
+  height: 400px;
+  width: 100%;
+  top: -400px;
+}
+
+section.subPage .innerWrap {
+  position: relative;
+  margin: 0 auto;
+  padding: 500px 0;
+  width: 900px;
+  height: 4500px;
+}
+
+@media only screen and (max-width: 768px) {
+  section.subPage .innerWrap {
+    width: 100%;
+  }
+}

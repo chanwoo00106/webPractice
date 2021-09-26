@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body {
+            background-color: black;
+            position: relative;
+            margin: 0;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        .cursor_item {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>test</h1>
+    <div class="cursor_item"></div>
+    <script>
+        let x = 0;
+        let y = 0;
+        let mx = 0;
+        let my = 0;
+        let speed = 0.08;
+        const cursor_item = document.querySelector(".cursor_item");
+        window.onload = function () {
+            const h1 = document.querySelector('h1');
+            window.addEventListener("mousemove", mousFunc, false);
+
+            function mousFunc(e) {
+                x = e.clientX;
+                y = e.clientY;
+                h1.innerHTML = "x: " + x + " y: " + y;
+                // console.log(e.clientX, e.clientY)
+            }
+            loop();
+        }
+        function loop() {
+            // console.log(1);
+            mx += (x - mx) * speed;
+            my += (y - my) * speed;
+            cursor_item.style.transform = `translate(${mx}px, ${my}px)`;
+            window.requestAnimationFrame(loop);
+        }
+    </script>
+</body>
+
+</html>
