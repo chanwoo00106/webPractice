@@ -1,0 +1,19 @@
+.empty {
+    width: 100%;
+    height: 80vh;
+}
+.img-bg {
+    width: 100%;
+    height: 80vh;
+    background-image: url(../img/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#contents {
+    background-color: white;
+    height: 1000000000px;
+    padding: 5rem;
+}

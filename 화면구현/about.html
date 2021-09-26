@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
     <title>Maryang - About</title>
 </head>
 
 <body>
-    <header id="header" class="about-header">
+    <header id="header">
         <h1>
             <a href="./index.html">Gang Jin</a>
         </h1>
@@ -42,23 +43,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
-    <script>
-        $('.section h1').eq(0).animate({ "opacity": 1, "bottom": "30%" }, 1000);
-        new fullpage('#full-page', {
-            licenseKey: '',
-            sectionsColor: ['#f6e58d', '#f9ca24', '#badc58', '#6ab04c', '#c7ecee'],
-            navigation: true,
-            navigationTooltips: ['마량', '고금대교', '까막섬', '야경', '스카이뷰'],
-            scrollingSpeed: 1000,
-            onLeave: function (origin, destination, direction) {
-                console.log(origin.index, destination.index, $('section.section').eq(destination.index))
-                $('.section h1').eq(destination.index).animate({ "opacity": 1, "bottom": "30%" }, 1000);
-            },
-            afterLoad: function (origin, destination, direction) {
-                $('.section h1').eq(origin.index).css({ "opacity": 0, "bottom": "40%" });
-            }
-        })
-    </script>
+    <script src="./js/about.js"></script>
 </body>
 
 </html>
