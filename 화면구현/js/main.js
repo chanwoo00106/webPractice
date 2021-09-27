@@ -6,6 +6,8 @@ const empty = document.querySelector(".empty");
 const mountainImg = document.querySelector(".mountain-img");
 const mountainDiv = document.querySelector(".parallax");
 const myStorage = window.localStorage;
+
+const mylocal = window.localStorage;
 let scrollTop = 0, x = 0, y = 0, speed = 0.3, mx = 0, my = 0;
 
 window.addEventListener("scroll", () => {
@@ -54,5 +56,8 @@ window.onload = () => {
             textList.appendChild(li);
         });
     }
-    else console.log("없어")
+    else {
+        const defaultJson = { posts: [] };
+        mylocal.setItem("text", JSON.stringify(defaultJson));
+    }
 }

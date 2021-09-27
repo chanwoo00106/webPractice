@@ -34,17 +34,21 @@
 .texts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 40px;
     list-style: none;
 }
 
 .parallax {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .mountain-img {
     width: 80%;
     transition: .4s;
+}
+
+.mountain-title {
+    margin-top: 30px;
 }
