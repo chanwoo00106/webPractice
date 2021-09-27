@@ -12,8 +12,28 @@
     z-index: -1;
 }
 
+.black-bg {
+    background-color: black;
+    position: fixed;
+    height: 80vh;
+    width: 100%;
+    z-index: -1;
+    opacity: .1;
+}
+
 #contents {
     background-color: white;
-    height: 1000000000px;
     padding: 5rem;
+}
+
+.texts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    list-style: none;
+}
+
+#header {
+    background-color: #fff;
+    width: 100%;
 }
