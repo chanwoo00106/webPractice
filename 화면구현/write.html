@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>shop</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/write.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>
+            <a href="./index.html">Gang Jin</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="./main.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a class="active" href="./write.html">Write</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="empty"></div>
+
+    <form action="./main.html" class="form">
+        <h1>글 작성</h1>
+        <div>
+            <input type="title" id="title" name="title" placeholder="제목 입력">
+            <textarea name="text" id="text" placeholder="글 작성"></textarea>
+            <div>
+                <button type="submit">제출</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        const form = document.querySelector(".form");
+        const input = document.querySelector("#title");
+        const text = document.querySelector("#text");
+        let result;
+        const mylocal = window.localStorage;
+
+        const posts = JSON.parse(mylocal.getItem("text"));
+
+        const defaultJson = { posts: [] };
+
+        if (!posts) mylocal.setItem("text", JSON.stringify(defaultJson));
+
+        form.addEventListener("submit", e => {
+            result = {
+                posts: [
+                    ...posts.posts,
+                    {
+                        text: text.value,
+                        title: input.value
+                    }
+                ]
+            }
+            mylocal.setItem("text", JSON.stringify(result));
+        });
+    </script>
+</body>
+
+</html>

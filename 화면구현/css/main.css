@@ -1,0 +1,54 @@
+#header {
+    background-color: #fff;
+    width: 100%;
+}
+
+.empty {
+    width: 100%;
+    height: 80vh;
+}
+.img-bg {
+    width: 100%;
+    height: 80vh;
+    background-image: url(../img/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.black-bg {
+    background-color: black;
+    position: fixed;
+    height: 80vh;
+    width: 100%;
+    z-index: -1;
+    opacity: .1;
+}
+
+#contents {
+    background-color: white;
+    padding: 5rem;
+}
+
+.texts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    list-style: none;
+}
+
+.parallax {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.mountain-img {
+    width: 80%;
+    transition: .4s;
+}
+
+.mountain-title {
+    margin-top: 30px;
+}
