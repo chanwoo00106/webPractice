@@ -12,24 +12,24 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 .s0 {
-    background-image: url(https://www.gangjin.go.kr/build/images/1544/15440021/1544002183.jpg/1x640x85/1x640_1544002183.jpg);
+    background-image: url(../img/1.jpg);
     color: rgba(0, 0, 0, 0.7);
 }
 .s1 {
-    background-image: url(https://mblogthumb-phinf.pstatic.net/20130927_64/gangjingun_1380244447418pPjMg_JPEG/%B8%B6%B7%AE%C7%D722.jpg?type=w2);
+    background-image: url(../img/2.jpg);
     color: rgba(255, 255, 255, 0.5);
 
 }
 .s2 {
-    background-image: url(https://mblogthumb-phinf.pstatic.net/MjAxODAyMjVfNDMg/MDAxNTE5NTU4NDM0MTQ3.eyOuXbiSLl-T87ujPpCP71wVpMGagY-GD5iXuOZzoR4g.I66K-F6NCUX-4YUSKRH-ODAdCZmRxiuirMlPHl5afK0g.JPEG.salzburg0723/DSC09845.JPG?type=w2);
+    background-image: url(../img/3.jpg);
     background-position: bottom;
     color: rgba(0, 0, 0, 0.7);
 }
 .s3 {
-    background-image: url(https://www.gangjin.go.kr/build/images/1544/15440022/1544002226.jpg/1x640x85/1x640_1544002226.jpg);
+    background-image: url(../img/4.jpg);
     color: rgba(255, 255, 255, 0.5);
 }
 .s4 {
-    background-image: url(https://www.gangjin.go.kr/build/images/1544/15440021/1544002194.jpg/1x640x85/1x640_1544002194.jpg);
+    background-image: url(../img/5.jpg);
     color: rgba(0, 0, 0, 0.7);
 }

@@ -11,13 +11,20 @@ body {
 }
 
 .form {
-    width: 50vw;
+    width:  20vw;
+    height: 50vh;
     margin: 0 auto;
     margin-top: 50px;
     background-color: #fff;
     padding: 20px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
+.title {
+    font-size: 3rem;
 }
 
 .form div {
@@ -25,7 +32,7 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 5px;
-    margin-top: 20px;
+    width: 100%;
 }
 
 .form div input {
@@ -38,19 +45,6 @@ body {
     font-size: 1rem;
     background-color: #dfe6e9;
     border: none;
-}
-
-.form div textarea {
-    outline: none;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    height: 500px;
-    font-size: 1rem;
-    background-color: #dfe6e9;
-    border: none;
-    font-family: 'Lora', serif;
-    resize: none;
 }
 
 .form div div {
