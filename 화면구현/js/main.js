@@ -1,24 +1,16 @@
-const bubbles = $(".bubble");
-const width = document.documentElement.offsetWidth - 50;
-let left;
-let leftList = [];
-
-
-
-
-
-
-function bubbleInit() {
-    for (let i = 0; i < 6; i++) {
-        left = Math.floor(Math.random() * (width - 0)) + 0;
-        leftList.push(left);
-        leftList.forEach(i => {
-            if(left + 50 > i && left > i + 50) {
-                console.log(i)
-            }
-        })
-        bubbles.eq(i).css("left", `${left}px`);
-    }
+const bottle = $(".bottle");
+let y = 0, x = 0, mx = 0, my = 0, speed = 0.03;
+window.onload = function () {
+    $(window).mousemove(function (e) {
+        x = (e.clientX - window.innerWidth / 2);
+        y = (e.clientY - window.innerHeight / 2);
+    });
+    loop();
 }
-
-bubbleInit();
+function loop() {
+    // console.log(1);
+    mx += (x - mx) * speed;
+    my += (y - my) * speed;
+    bottle.css("transform", `translate(${-mx / 15}px, ${-my / 15}px)`);
+    window.requestAnimationFrame(loop);
+}
