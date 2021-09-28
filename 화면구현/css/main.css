@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+* {
+    color: #273849;
+}
+
+body {
+    background: linear-gradient(180deg,#48dbfb,#0abde3,#0097e6, #2e86de, #3867d6);
+    height: 100vh;
+    width: 100vw;
+    /* overflow: hidden; */
+}
+
+.empty {
+    height: 15vh;
+}
+
+#wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.contents {
+    width: 40%;
+}
+
+.contents h1 {
+    font-size: 5rem;
+    font-family: 'Scheherazade New', serif;
+}
+
+.contents p {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.bottle {
+    background-image: url(../img/bottle.png);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+    width: 30vw;
+    height: 70vh;
+}
+
+.bubble {
+    background-image: url(../img/bubble.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    bottom: -50px;
+}
