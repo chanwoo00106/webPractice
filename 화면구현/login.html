@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>shop</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/write.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
@@ -27,40 +27,27 @@
     <form action="./main.html" class="form">
         <h1 class="title">login</h1>
         <div>
-            <input type="text" id="id" name="id" placeholder="Id">
-            <input type="password" placeholder="Password">
-            <div>
+            <div class="id-form">
+                <label for="id">username</label>
+                <input type="text" id="id" name="id" placeholder="Type your username">
+            </div>
+            <div class="pw-form">
+                <label for="password">password</label>
+                <input type="password" name="password" placeholder="Type your
+                password">
+            </div>
+            <a class="forgot" href="#">forgot password?</a>
+            <div class="btn-form">
                 <button type="submit">Login</button>
             </div>
         </div>
+
+        <div class="order">
+            <span class="git-icon icon"></span>
+            <span class="google-icon icon"></span>
+            <span class="twitter-icon icon"></span>
+        </div>
     </form>
-
-    <script>
-        const form = document.querySelector(".form");
-        const input = document.querySelector("#title");
-        const text = document.querySelector("#text");
-        let result;
-        const mylocal = window.localStorage;
-
-        const posts = JSON.parse(mylocal.getItem("text"));
-
-        const defaultJson = { posts: [] };
-
-        if (!posts) mylocal.setItem("text", JSON.stringify(defaultJson));
-
-        form.addEventListener("submit", e => {
-            result = {
-                posts: [
-                    ...posts.posts,
-                    {
-                        text: text.value,
-                        title: input.value
-                    }
-                ]
-            }
-            mylocal.setItem("text", JSON.stringify(result));
-        });
-    </script>
 </body>
 
 </html>
