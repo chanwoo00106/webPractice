@@ -11,11 +11,15 @@ async function init(category) {
         });
     
         data.data.articles.map(i => {
-            let img = document.createElement("img");
-            img.src = i.urlToImage;
-            let imgUrl = document.createElement('a');
-            imgUrl.href = i.url;
-            imgUrl.append(img);
+            let li = document.createElement('li');
+            if (i.url.indexOf('https://news.google.com/') === -1) {
+                let img = document.createElement("img");
+                img.src = i.urlToImage;
+                let imgUrl = document.createElement('a');
+                imgUrl.href = i.url;
+                imgUrl.append(img);
+                li.append(imgUrl);
+            }
     
             let url = document.createElement('a');
             url.href = i.url;
@@ -33,9 +37,8 @@ async function init(category) {
             let div = document.createElement('div');
             div.classList.add('text');
             div.append(title, p, date)
-    
-            let li = document.createElement('li');
-            li.append(imgUrl, div);
+
+            li.append(div);
     
             ul.append(li);
         });
