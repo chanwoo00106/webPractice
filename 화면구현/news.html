@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #header {
+            background-color: #fff;
+            width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        img {
+            width: 20vw;
+            max-height: 20vh;
+        }
+
+        .empty {
+            height: 10vh;
+        }
+
+        #app {
+            width: 70%;
+            padding: 10px 30px;
+            margin: 0 auto;
+            background-color: #dfe6e9;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .news-list {
+            list-style: none;
+        }
+
+        .news-list li {
+            display: flex;
+            margin: 5rem 0;
+        }
+
+        .text {
+            padding: 0 20px;
+        }
+
+        .text p {
+            font-size: 1.1rem;
+        }
+
+        .date {
+            font-size: .6rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <h1>
+            <a href="./index.html">잡것들</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a class="active" href="./main.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./write.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="empty"></div>
+
+    <div id="app">
+        <h1 class="title">Dictator News</h1>
+        <ul class="news-list"></ul>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/env.js"></script>
+    <script>
+        const ul = document.querySelector(".news-list");
+        axios({
+            method: "get",
+            url: `https://newsapi.org/v2/top-headlines?country=kr&category=sports&apiKey=${key}`
+        }).then(data => {
+            data.data.articles.map(i => {
+                let img = document.createElement("img");
+                img.src = i.urlToImage;
+                let imgUrl = document.createElement('a');
+                imgUrl.href = i.url;
+                imgUrl.append(img);
+
+                let url = document.createElement('a');
+                url.href = i.url;
+                url.innerText = i.title
+                let title = document.createElement('h1');
+                title.append(url);
+
+                let p = document.createElement('p');
+                p.innerText = i.description;
+
+                let date = document.createElement('p');
+                date.innerText = i.publishedAt;
+                date.classList.add('date');
+
+                let div = document.createElement('div');
+                div.classList.add('text');
+                div.append(title, p, date)
+
+                let li = document.createElement('li');
+                li.append(imgUrl, div);
+
+                ul.append(li);
+            })
+        })
+//         author: null
+// content: null
+// description: "동호회 휩쓴 재야 고수 겸 당구 인기 유튜버 프로당구 투어 초청서 쿠드롱 꺾고 4강 이변 유튜버, 선수, 일반인 3중 ‘페르소나’ 겪어 “삶은 치열하게” 정신으로 당구 전파 뿌듯"
+// publishedAt: "2021-09-29T02:10:31Z"
+// source: {id: null, name: 'Hani.co.kr'}
+// title: "가면 쓴 '당구천재' 해커, “저도 벗고 싶어요” - 한겨레"
+// url: "https://www.hani.co.kr/arti/sports/sports_general/1013153.html"
+// urlToImage: "https://flexible.img.hani.co.kr/flexib
+    </script>
+</body>
+
+</html>
