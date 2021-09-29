@@ -26,7 +26,7 @@
 
     <form action="./main.html" class="form">
         <h1 class="title">LOGIN</h1>
-        <div>
+        <div class="login">
             <div class="id-form">
                 <label for="id">username</label>
                 <input type="text" id="id" name="id" placeholder="Type your username">
@@ -56,28 +56,7 @@
         <a class="change" href="#">SIGN UP</a>
     </form>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script>
-        const change = $(".change");
-        const title = $(".title");
-        const btn = $("button");
-        const confirmP = $(".confirm");
-        const or = $(".or > span");
-        change.click(function () {
-            if (change.text() === "SIGN UP") {
-                change[0].innerText = "LOGIN"
-                title[0].innerText = "SIGN UP";
-                confirmP.css('display', 'block');
-                btn[0].innerText = "SIGN UP";
-                or[0].innerText = "Or Sign Up";
-            } else {
-                change[0].innerText = "SIGN UP"
-                title[0].innerText = "LOGIN";
-                confirmP.css('display', 'none');
-                btn[0].innerText = "LOGIN";
-                or[0].innerText = "Or Sign Up Using";
-            }
-        });
-    </script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

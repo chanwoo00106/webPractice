@@ -29,7 +29,7 @@ body {
     text-align: left;
 }
 
-.form > div {
+.login {
     margin-top: 20%;
     width: 100%;
 }
@@ -81,6 +81,10 @@ body {
 
 .form div div button:hover {
     background-position: right;
+}
+
+.or {
+    margin-top: 5%;
 }
 
 .icons {
