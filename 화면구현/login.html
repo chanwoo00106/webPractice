@@ -25,7 +25,7 @@
     <div class="empty"></div>
 
     <form action="./main.html" class="form">
-        <h1 class="title">login</h1>
+        <h1 class="title">LOGIN</h1>
         <div>
             <div class="id-form">
                 <label for="id">username</label>
@@ -33,8 +33,11 @@
             </div>
             <div class="pw-form">
                 <label for="password">password</label>
-                <input type="password" name="password" placeholder="Type your
-                password">
+                <input type="password" name="password" placeholder="Type your password">
+            </div>
+            <div class="pw-form Type confirm" style="display: none;">
+                <label for="password-h">confirm password</label>
+                <input type="password" name="password-h" placeholder="Type confirm password">
             </div>
             <a class="forgot" href="#">forgot password?</a>
             <div class="btn-form">
@@ -42,12 +45,39 @@
             </div>
         </div>
 
-        <div class="order">
-            <span class="git-icon icon"></span>
-            <span class="google-icon icon"></span>
-            <span class="twitter-icon icon"></span>
+        <div class="or">
+            <span href="#">Or Sign Up Using</span>
+            <div class="icons">
+                <a href="#"><span class="git-icon icon"></span></a>
+                <a href="#"><span class="google-icon icon"></span></a>
+                <a href="#"><span class="twitter-icon icon"></span></a>
+            </div>
         </div>
+        <a class="change" href="#">SIGN UP</a>
     </form>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        const change = $(".change");
+        const title = $(".title");
+        const btn = $("button");
+        const confirmP = $(".confirm");
+        const or = $(".or > span");
+        change.click(function () {
+            if (change.text() === "SIGN UP") {
+                change[0].innerText = "LOGIN"
+                title[0].innerText = "SIGN UP";
+                confirmP.css('display', 'block');
+                btn[0].innerText = "SIGN UP";
+                or[0].innerText = "Or Sign Up";
+            } else {
+                change[0].innerText = "SIGN UP"
+                title[0].innerText = "LOGIN";
+                confirmP.css('display', 'none');
+                btn[0].innerText = "LOGIN";
+                or[0].innerText = "Or Sign Up Using";
+            }
+        });
+    </script>
 </body>
 
 </html>

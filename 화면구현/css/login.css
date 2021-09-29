@@ -83,10 +83,17 @@ body {
     background-position: right;
 }
 
-.order {
-    gap: 10px;
+.icons {
+    gap: 20px;
     display: flex;
     justify-content: center;
+}
+
+.or span {
+    color: #A6A6A6;
+    text-decoration: none;
+    display: block;
+    text-align: center;
 }
 
 .icon {
@@ -107,4 +114,11 @@ body {
 
 .google-icon {
     background-image: url(../img/google.svg);
+}
+
+.change {
+    text-decoration: none;
+    color: #A6A6A6;
+    display: block;
+    text-align: center;
 }
