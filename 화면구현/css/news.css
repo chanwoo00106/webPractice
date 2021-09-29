@@ -37,6 +37,14 @@ img {
     margin-bottom: 30px;
 }
 
+.categorys {
+    text-align: center;
+}
+
+.category {
+    margin: 0 10px;
+}
+
 .news-list {
     list-style: none;
 }

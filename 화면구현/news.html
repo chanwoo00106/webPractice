@@ -28,6 +28,40 @@
 
     <div id="app">
         <h1 class="title">Dictator News</h1>
+        <div class="categorys">
+            <span class="category">
+                <input onclick="init('all')" type="radio" name="category" checked id="all">
+                <label for="all">all</label>
+            </span>
+            <span class="category">
+                <input onclick="init('business')" type="radio" name="category" id="business">
+                <label for="business">business</label>
+            </span>
+            <span class="category">
+                <input onclick="init('entertainment')" type="radio" name="category" id="entertainment">
+                <label for="entertainment">entertainment</label>
+            </span>
+            <span class="category">
+                <input onclick="init('general')" type="radio" name="category" id="general">
+                <label for="general">general</label>
+            </span>
+            <span class="category">
+                <input onclick="init('health')" type="radio" name="category" id="health">
+                <label for="health">health</label>
+            </span>
+            <span class="category">
+                <input onclick="init('science')" type="radio" name="category" id="science">
+                <label for="science">science</label>
+            </span>
+            <span class="category">
+                <input onclick="init('sports')" type="radio" name="category" id="sports">
+                <label for="sports">sports</label>
+            </span>
+            <span class="category">
+                <input onclick="init('technology')" type="radio" name="category" id="technology" value="technology">
+                <label for="technology">technology</label>
+            </span>
+        </div>
         <ul class="news-list"></ul>
     </div>
     <script src="./js/axios.min.js"></script>
