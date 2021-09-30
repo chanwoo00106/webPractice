@@ -1,0 +1,32 @@
+@charset 'utf-8';
+
+
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    overflow-x: hidden;
+    color: rgb(29, 29, 31);
+    /* 글자 사이의 간격을 조절합니다. */
+    letter-spacing: -0.05em;
+    background: white;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.global-nav {
+    height: 44px;
+}
+
+.global-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
