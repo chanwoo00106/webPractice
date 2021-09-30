@@ -3,6 +3,15 @@ const ul = document.querySelector(".news-list");
 async function init(category) {
     while (ul.firstChild) ul.removeChild(ul.firstChild);
 
+    const a = $.ajax({
+        url: `https://newsapi.org/v2/top-headlines?country=kr${category === 'all' ? '' : `&category=${category}`}&apiKey=${key}`,
+        success: function (data) {
+            return data
+        }
+    })
+
+    console.log(a);
+
     try {
         const data = await axios({
             method: "GET",
