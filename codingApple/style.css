@@ -139,6 +139,14 @@
 .img:nth-child(3) {background-image: url(./img/portfolio-3.jpg);}
 .img:nth-child(4) {background-image: url(./img/portfolio-4.jpg);}
 
+.img {
+    transition: .4s;
+}
+
+.img:hover {
+    transform: scale(.9, .9);
+}
+
 .footer {
     margin-top: 80px;
 }
@@ -162,4 +170,88 @@
 .copyRight {
     margin: 40px 0;
     text-align: center;
+}
+
+@media screen and (max-width: 1400px) {
+    .images {
+        min-width: 700px;
+        max-width: 700px;
+        display: inline-block;
+    }
+
+    .img {
+        width: 100%;
+        height: 467px;
+    }
+
+    .services {
+        gap: 50px;
+    }
+    .icon {
+        background-color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 100px;
+        display: inline-block;
+    }
+    
+    .icons {
+        padding: 10px;
+    }
+    
+    .fas {
+        font-size: 20px;
+        color: #4E61C0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .images {
+        min-width: 100%;
+        max-width: 100%;
+        display: inline-block;
+    }
+
+    .services {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .top {
+        background: linear-gradient(#4997DC, #4E64C1);
+        width: 100%;
+        height: 70vh;
+        color: #ffffff;
+        position: relative;
+        padding: 100px;
+    }
+    
+    .title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .text {
+        padding: 20px 0;
+    }
+    
+    .top .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .phone {
+        width: 50%;
+        transform: translateX(50%);
+        position: absolute;
+        right: 50%;
+        bottom: 0;
+    }
+    .sub-title {
+        font-size: 1rem;
+    }
+    p {display: none;}
 }
