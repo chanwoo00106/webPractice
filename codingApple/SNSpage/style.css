@@ -53,3 +53,41 @@ hr {
     border: 1px solid #E9E9E9;
 }
 
+.contents {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    gap: 20px;
+}
+
+.left {
+    height: 300px;
+    line-height: 30px;
+}
+
+.bg-setting {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.about-wrap {
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.about h2 {
+    padding: 20px 0;
+    font-size: 2rem;
+}
+
+.skill-wrap {
+    padding: 30px;
+}
+
+.skill {
+    border: 1px solid #D9D9D9;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
