@@ -38,3 +38,51 @@
     right: 100px;
     bottom: 0;
 }
+
+.portfollo {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sub-title {
+    font-size: 1.2rem;
+}
+
+.service {
+    width: 100%;
+    height: 40vh;
+    background: #4E61C0;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 100px;
+    margin-top: 90px;
+}
+
+.icon {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 100px;
+    display: inline-block;
+}
+
+.icons {
+    padding: 30px;
+}
+
+.fas {
+    font-size: 40px;
+    color: #4E61C0;
+}
