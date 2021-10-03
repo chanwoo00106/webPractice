@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 50px 100px;
+    background: #e6e8ec;
+}
+
+.top {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+
+}
+
+.name {
+    font-size: 2rem;
+}
+
+.location {
+    color: #70B9F7;
+    margin-bottom: 5px;
+}
+
+.contact {
+    border: none;
+    background-color: #70B9F7;
+    border-radius: 3px;
+    color: #ffffff;
+    padding: 10px;
+    width: 100px;
+}
+
+.user-status {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    color: #595959;
+    padding: 40px;
+}
+
+hr {
+    border: 1px solid #E9E9E9;
+}
+
