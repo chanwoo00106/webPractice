@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "product_name": "식기세척기",
+      "brand_name": "세척나라",
+      "photo": "pr1.jpg",
+      "price": 100000
+    },
+    {
+      "id": 1,
+      "product_name": "원목 침대 프레임",
+      "brand_name": "침대나라",
+      "photo": "pr2.jpg",
+      "price": 200000
+    },
+    {
+      "id": 2,
+      "product_name": "천연 디퓨저 세트",
+      "brand_name": "향기나라",
+      "photo": "pr3.jpg",
+      "price": 300000
+    },
+    {
+      "id": 3,
+      "product_name": "시원한 서큘레이터",
+      "brand_name": "바람나라",
+      "photo": "pr4.jpg",
+      "price": 400000
+    }
+  ]
+}
