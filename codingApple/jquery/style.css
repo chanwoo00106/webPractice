@@ -1,0 +1,21 @@
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #d3cdcd;
+}
+
+.wrap {
+    width: 80%;
+    margin: 50px auto 0;
+}
+
+.search-bar {
+    width: 100%;
+    border: 1px solid #b6b8bb;
+    border-radius: 10px;
+    padding: 10px 5px;
+    margin-bottom: 50px;
+}
+
