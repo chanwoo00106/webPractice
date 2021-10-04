@@ -1,9 +1,9 @@
 const list = $(".product-list-div")[0];
 let result = "";
 
-window.onload = async function() {
+$(document).ready(function() {
 
-    await $.getJSON("./db/store.json", function (data) {
+    $.getJSON("./db/store.json", function (data) {
         data.products.forEach(d => {
             const temp = `<div class="card drag">
     <img src="./img/${d.photo}" class="card-img-top" alt="img">
@@ -24,6 +24,6 @@ window.onload = async function() {
         list.innerHTML = result;
     });
 
-    const drag = $(".drag");
-    console.log(drag)
-}
+    console.log($(".drag"))
+    
+})
