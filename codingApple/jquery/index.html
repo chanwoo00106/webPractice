@@ -43,9 +43,24 @@
 
     <div class="wrap">
         <input class="search-bar" type="text" placeholder="검색어를 입력해주세요">
-        <div class="contents">
-            <section class="product-list"></section>
-            <section class="bascket"></section>
+        <div class="contents gap-5">
+            <section class="product-list">
+                <h1>모든 상품 리스트</h1>
+                <div class="card-group gap-5 product-list-div"></div>
+            </section>
+            <section class="bascket">
+                <h1>장바구니</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="placeholder w-100 d-flex justify-content-center align-items-center"
+                            style="background-color: #000000; color: #ffffff; height: 200px; ">
+                            이곳에 상품을 놓아주세요.
+                        </div>
+                        <p class="card-text align-right">가격</p>
+                    </div>
+                    <a href="#" class="btn btn-primary buyBnt">구매하기</a>
+                </div>
+            </section>
         </div>
     </div>
 
@@ -53,6 +68,7 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -19,3 +19,17 @@
     margin-bottom: 50px;
 }
 
+
+.contents {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.align-right {
+    margin: 10px 0;
+    text-align: right;
+}
+
+.buyBnt {
+    width: 100%;
+}
