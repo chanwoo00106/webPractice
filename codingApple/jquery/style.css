@@ -25,6 +25,11 @@
     grid-template-columns: 2fr 1fr;
 }
 
+.product-list-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .align-right {
     margin: 10px 0;
     text-align: right;
