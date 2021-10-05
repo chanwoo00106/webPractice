@@ -23,5 +23,10 @@ window.onload = async function() {
         });
         list.innerHTML = result;
     });
-    console.log($('.drag'))
+
+    $(".drag").draggable({
+        stop : function(){ // 드래그 종료시 실행
+            $(this).animate({ top : 0, left : 0 }, 200);
+        }
+    });
 }
