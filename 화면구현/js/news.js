@@ -4,13 +4,14 @@ async function init(category) {
     while (ul.firstChild) ul.removeChild(ul.firstChild);
 
     try {
-        const data = await axios({
-            method: "GET",
-            dataType: 'jsonp',
-            url: `https://newsapi.org/v2/top-headlines?country=kr${category === 'all' ? '' : `&category=${category}`}&apiKey=${key}`
+        const data = await $.ajax({
+            url: `https://newsapi.org/v2/top-headlines?country=kr${category === 'all' ? '' : `&category=${category}`}&apiKey=${key}`,
+            success: function (data) {
+                return data
+            }
         });
 
-        data.data.articles.map(i => {
+        data.articles.map(i => {
             let li = document.createElement('li');
             if (i.url.indexOf('https://news.google.com/') === -1) {
                 let img = document.createElement("img");

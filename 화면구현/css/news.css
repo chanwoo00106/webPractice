@@ -19,6 +19,10 @@ a {
     color: black;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 img {
     width: 20vw;
     max-height: 20vh;
