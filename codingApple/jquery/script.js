@@ -5,6 +5,8 @@ const price = $(".price")[0];
 const buy = $(".buyBnt");
 let result = "", resultPrice = 0;
 const buyList = [];
+const canvas = document.getElementById('canvas');
+const c = canvas.getContext('2d');
 
 window.onload = async function() {
 
@@ -103,19 +105,24 @@ $('.search-bar').bind("input", async function (e) {
 
 
 buy.click(function () {
-    const canvas = document.getElementById('canvas');
     $(".recipt, .black-bg").fadeIn();
-    const c = canvas.getContext('2d');
+    c.fillStyle = '#ffffff'; 
+    c.fillRect(0, 0, canvas.width, canvas.height);
+    c.fillStyle = "black"
     c.font = '20px Noto Sans KR';
     c.fillText('영수증', 10, 20);
     buyList.forEach((i, index) => {
         c.fillText(i.name, 20, (50 + 20 * index));
         c.fillText(i.price, 200, (50 + 20 * index));
-        if (buyList.length === index + 1) c.fillText(`${resultPrice}원`, 200, (50 + 20 * (index + 1)));
+        if (buyList.length === index + 1) {
+            c.fillText("가격", 20, (50 + 20 * (index + 3)));
+            c.fillText(`${resultPrice}원`, 200, (50 + 20 * (index + 3)));
+        }
     })
 
 });
 
 $(".close").click(function() {
     $(".recipt, .black-bg").fadeOut();
+    c.clearRect(0,0, canvas.width, canvas.height);
 })
