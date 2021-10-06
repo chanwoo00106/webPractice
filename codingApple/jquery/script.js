@@ -2,7 +2,9 @@ const list = $(".product-list-div")[0];
 const dragItem = $(".drag-item")[0];
 const search = $('.search-bar');
 const price = $(".price")[0];
+const buy = $(".buyBnt");
 let result = "", resultPrice = 0;
+const buyList = [];
 
 window.onload = async function() {
 
@@ -22,7 +24,6 @@ window.onload = async function() {
 </div>
 `;
             result += temp;
-    
         });
         list.innerHTML = result;
     });
@@ -34,6 +35,11 @@ window.onload = async function() {
     $(".drop").droppable({
         drop: function (event, ui) {
             var item = $(ui.draggable);
+
+            buyList.push({
+                name: item[0].querySelector('h5').innerText,
+                price: item[0].querySelector('small').innerText
+            })
 
             const img = document.createElement('img');
             img.src = item[0].querySelector('img').src
@@ -94,3 +100,22 @@ $('.search-bar').bind("input", async function (e) {
         }
     });
 });
+
+
+buy.click(function () {
+    const canvas = document.getElementById('canvas');
+    $(".recipt, .black-bg").fadeIn();
+    const c = canvas.getContext('2d');
+    c.font = '20px Noto Sans KR';
+    c.fillText('영수증', 10, 20);
+    buyList.forEach((i, index) => {
+        c.fillText(i.name, 20, (50 + 20 * index));
+        c.fillText(i.price, 200, (50 + 20 * index));
+        if (buyList.length === index + 1) c.fillText(`${resultPrice}원`, 200, (50 + 20 * (index + 1)));
+    })
+
+});
+
+$(".close").click(function() {
+    $(".recipt, .black-bg").fadeOut();
+})
