@@ -52,11 +52,12 @@
                 <h1>장바구니</h1>
                 <div class="card">
                     <div class="card-body">
-                        <div class="placeholder w-100 d-flex justify-content-center align-items-center"
+                        <div class="placeholder w-100 d-flex justify-content-center align-items-center drop"
                             style="background-color: #000000; color: #ffffff; height: 200px; ">
                             이곳에 상품을 놓아주세요.
                         </div>
-                        <p class="card-text align-right">가격</p>
+                        <div class="drag-item"></div>
+                        <p class="card-text align-right price">가격</p>
                     </div>
                     <a href="#" class="btn btn-primary buyBnt">구매하기</a>
                 </div>
@@ -72,7 +73,13 @@
         integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
     <script>
+        $('.search-bar').bind("input", async function (e) {
+            const text = e.target.value;
+            console.log(text)
+            const list = $('.drag-item')[0]
+            while (list.firstChild) list.removeChild(list.firstChild);
 
+        });
     </script>
 </body>
 

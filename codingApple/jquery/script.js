@@ -1,5 +1,8 @@
 const list = $(".product-list-div")[0];
-let result = "";
+const dragItem = $(".drag-item")[0];
+const search = $('.search-bar');
+const price = $(".price")[0];
+let result = "", resultPrice = 0;
 
 window.onload = async function() {
 
@@ -23,10 +26,36 @@ window.onload = async function() {
         });
         list.innerHTML = result;
     });
-
     $(".drag").draggable({
-        stop : function(){ // 드래그 종료시 실행
-            $(this).animate({ top : 0, left : 0 }, 200);
+        stop: function () { // 드래그 종료시 실행
+            $(this).animate({ top: 0, left: 0 }, 200);
         }
     });
+    $(".drop").droppable({
+        drop: function (event, ui) {
+            var item = $(ui.draggable);
+
+            const img = document.createElement('img');
+            img.src = item[0].querySelector('img').src
+            img.classList.add('w-100');
+            img.alt = 'buy_img'
+            const h5 = document.createElement('h5');
+            h5.innerText = item[0].querySelector('h5').innerText;
+            const p = document.createElement('p');
+            p.innerText = item[0].querySelector('p').innerText;
+            const small = document.createElement('small');
+            small.innerText = item[0].querySelector('small').innerText;
+            resultPrice += Number(small.innerText);
+
+            price.innerText = `${resultPrice}원`;
+
+            const div = document.createElement('div');
+            div.append(h5, p, small);
+            const topDiv = document.createElement('div');
+            topDiv.append(img, div);
+
+            dragItem.append(topDiv)
+        }
+    })
 }
+

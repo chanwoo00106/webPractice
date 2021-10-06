@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .nav-link {
     color: #ffffff;
 }
@@ -42,4 +46,10 @@
 .drag {
     z-index: 10;
     cursor: move;
+}
+
+.drag-item {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow: auto;
 }
