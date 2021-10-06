@@ -8,11 +8,9 @@ const buyList = [];
 const canvas = document.getElementById('canvas');
 const c = canvas.getContext('2d');
 
-window.onload = async function() {
-
-    await $.getJSON("./db/store.json", function (data) {
-        data.products.forEach(d => {
-            const temp = `<div class="card drag">
+const createHTML = d => {
+    return `
+<div class="card drag">
     <img src="./img/${d.photo}" class="card-img-top" alt="img">
     <div class="card-body">
         <h5 class="card-title">${d.product_name}</h5>
@@ -25,6 +23,13 @@ window.onload = async function() {
     </div>
 </div>
 `;
+}
+
+window.onload = async function() {
+
+    await $.getJSON("./db/store.json", function (data) {
+        data.products.forEach(d => {
+            const temp = createHTML(d);
             result += temp;
         });
         list.innerHTML = result;
@@ -70,29 +75,14 @@ window.onload = async function() {
 $('.search-bar').bind("input", async function (e) {
     const text = e.target.value;
     let result = "";
-    console.log(text)
     const list = $(".product-list-div")[0];
     while (list.firstChild) list.removeChild(list.firstChild);
 
     await $.getJSON("./db/store.json", function (data) {
-        console.log(data.products)
         const resultData = data.products.filter(i => i.product_name.indexOf(text) !== -1);
         resultData.forEach(d => {
-            const temp = `<div class="card drag">
-<img src="./img/${d.photo}" class="card-img-top" alt="img">
-<div class="card-body">
-<h5 class="card-title">${d.product_name}</h5>
-<p class="card-text">
-    ${d.brand_name}
-</p>
-</div>
-<div class="card-footer">
-<small class="text-muted">${d.price}</small>
-</div>
-</div>
-`;
+            const temp = createHTML(d);
             result += temp;
-
         });
         list.innerHTML = result;
     });
