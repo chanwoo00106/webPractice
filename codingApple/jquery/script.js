@@ -59,3 +59,38 @@ window.onload = async function() {
     })
 }
 
+$('.search-bar').bind("input", async function (e) {
+    const text = e.target.value;
+    let result = "";
+    console.log(text)
+    const list = $(".product-list-div")[0];
+    while (list.firstChild) list.removeChild(list.firstChild);
+
+    await $.getJSON("./db/store.json", function (data) {
+        console.log(data.products)
+        const resultData = data.products.filter(i => i.product_name.indexOf(text) !== -1);
+        resultData.forEach(d => {
+            const temp = `<div class="card drag">
+<img src="./img/${d.photo}" class="card-img-top" alt="img">
+<div class="card-body">
+<h5 class="card-title">${d.product_name}</h5>
+<p class="card-text">
+    ${d.brand_name}
+</p>
+</div>
+<div class="card-footer">
+<small class="text-muted">${d.price}</small>
+</div>
+</div>
+`;
+            result += temp;
+
+        });
+        list.innerHTML = result;
+    });
+    $(".drag").draggable({
+        stop: function () { // 드래그 종료시 실행
+            $(this).animate({ top: 0, left: 0 }, 200);
+        }
+    });
+});
