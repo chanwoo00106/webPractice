@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <title>shop</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/login.css">
-</head>
-
-<body>
+  <body>
     <header id="header">
-        <h1>
-            <a href="./index.html">잡것들</a>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="./main.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a class="active" href="./login.html">Login</a></li>
-                <li><a href="./news.html">News</a></li>
-            </ul>
-        </nav>
+      <h1>
+        <a href="./index.html">잡것들</a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="./main.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a class="active" href="./login.html">Login</a></li>
+          <li><a href="./news.html">News</a></li>
+        </ul>
+      </nav>
     </header>
     <div class="empty"></div>
 
     <form action="./main.html" class="form">
-        <h1 class="title">LOGIN</h1>
-        <div class="login">
-            <div class="id-form">
-                <label for="id">username</label>
-                <input type="text" id="id" name="id" placeholder="Type your username">
-            </div>
-            <div class="pw-form">
-                <label for="password">password</label>
-                <input type="password" name="password" placeholder="Type your password">
-            </div>
-            <div class="pw-form Type confirm" style="display: none;">
-                <label for="password-h">confirm password</label>
-                <input type="password" name="password-h" placeholder="Type confirm password">
-            </div>
-            <a class="forgot" href="#">forgot password?</a>
-            <div class="btn-form">
-                <button type="submit">Login</button>
-            </div>
+      <h1 class="title">LOGIN</h1>
+      <div class="login">
+        <div class="id-form">
+          <label for="id">username</label>
+          <input
+            type="text"
+            id="id"
+            name="id"
+            placeholder="Type your username"
+          />
         </div>
+        <div class="pw-form">
+          <label for="password">password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Type your password"
+          />
+        </div>
+        <div class="pw-form Type confirm" style="display: none">
+          <label for="password-h">confirm password</label>
+          <input
+            type="password"
+            name="password-h"
+            placeholder="Type confirm password"
+          />
+        </div>
+        <a class="forgot" href="#">forgot password?</a>
+        <div class="btn-form">
+          <button type="submit">LOGIN</button>
+        </div>
+      </div>
 
-        <div class="or">
-            <span href="#">Or Sign Up Using</span>
-            <div class="icons">
-                <a href="#"><span class="git-icon icon"></span></a>
-                <a href="#"><span class="google-icon icon"></span></a>
-                <a href="#"><span class="twitter-icon icon"></span></a>
-            </div>
+      <div class="or">
+        <span href="#">Or Sign Up Using</span>
+        <div class="icons">
+          <a href="#"><span class="git-icon icon"></span></a>
+          <a href="#"><span class="google-icon icon"></span></a>
+          <a href="#"><span class="twitter-icon icon"></span></a>
         </div>
-        <a class="change" href="#">SIGN UP</a>
+      </div>
+      <a class="change" href="#">SIGN UP</a>
     </form>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="./js/login.js"></script>
-</body>
-
+  </body>
 </html>
