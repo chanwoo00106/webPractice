@@ -1,9 +1,31 @@
 <html>
   <head>
     <title>Canvas game</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <canvas id="canvas"></canvas>
+    <div class="main">
+      <div class="status">
+        <!-- player health -->
+        <div class="healthBar playerHealth">
+          <div class="player"></div>
+          <div id="player" class="health"></div>
+        </div>
+
+        <!-- timer -->
+        <div class="timer"></div>
+
+        <!-- enemy health -->
+        <div class="healthBar">
+          <div class="enemy"></div>
+          <div id="enemy" class="health"></div>
+        </div>
+        <div></div>
+      </div>
+
+      <canvas id="canvas"></canvas>
+    </div>
+
     <script src="./index.js"></script>
   </body>
 </html>

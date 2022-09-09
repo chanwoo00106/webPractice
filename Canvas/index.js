@@ -1,4 +1,6 @@
 const canvas = document.querySelector("canvas")
+const enemyHealth = document.querySelector("#enemy")
+const playerHealth = document.querySelector("#player")
 const c = canvas.getContext('2d')
 
 canvas.width = 1024
@@ -26,6 +28,7 @@ class Sprite {
     }
     this.color = color
     this.isAttacking = false
+    this.health = 100
   }
 
   draw() {
@@ -156,6 +159,8 @@ function animate() {
     player.isAttacking
   ) {
     player.isAttacking = false
+    enemy.health -= 20
+    enemyHealth.style.width = `${enemy.health}%`
     console.log("hi")
   }
 
@@ -167,6 +172,8 @@ function animate() {
     enemy.isAttacking
   ) {
     enemy.isAttacking = false
+    player.health -= 20
+    playerHealth.style.width = `${player.health}%`
     console.log("enemy is attacking")
   }
 }
